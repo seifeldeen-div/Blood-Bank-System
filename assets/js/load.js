@@ -1,5 +1,9 @@
-// Navbar
-fetch("../components/navbar.html")
+// بيحدد الـ path تلقائي بناءً على مكان الصفحة
+const isRoot = window.location.pathname.endsWith("index.html")
+    || window.location.pathname === "/";
+const basePath = isRoot ? "." : "..";
+
+fetch(`${basePath}/components/navbar.html`)
     .then(response => {
         if (!response.ok) throw new Error("Navbar not found");
         return response.text();
@@ -7,25 +11,20 @@ fetch("../components/navbar.html")
     .then(data => {
         document.getElementById("navbar").innerHTML = data;
 
-        // burger navbabar
-        let burgerSign = document.querySelector("#burgerSign")
-        let links = document.querySelector("#links")
+        let burgerSign = document.querySelector("#burgerSign");
+        let links = document.querySelector("#links");
 
         burgerSign.addEventListener("click", () => {
-
-            let currentDisplay = window.getComputedStyle(links).display
-            console.log("currentDisplay:", currentDisplay)
-
+            // let currentDisplay = window.getComputedStyle(links).display;
             if (links.style.display === "none")
-                links.style.display = "flex"
+                links.style.display = "flex";
             else
-                links.style.display = "none"
-        })
+                links.style.display = "none";
+        });
     })
     .catch(err => console.error("Error loading navbar:", err));
 
-// Footer
-fetch("../components/footer.html")
+fetch(`${basePath}/components/footer.html`)
     .then(response => {
         if (!response.ok) throw new Error("Footer not found");
         return response.text();
