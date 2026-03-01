@@ -6,6 +6,21 @@ fetch("../components/navbar.html")
     })
     .then(data => {
         document.getElementById("navbar").innerHTML = data;
+
+        // burger navbabar
+        let burgerSign = document.querySelector("#burgerSign")
+        let links = document.querySelector("#links")
+
+        burgerSign.addEventListener("click", () => {
+
+            let currentDisplay = window.getComputedStyle(links).display
+            console.log("currentDisplay:", currentDisplay)
+
+            if (links.style.display === "none")
+                links.style.display = "flex"
+            else
+                links.style.display = "none"
+        })
     })
     .catch(err => console.error("Error loading navbar:", err));
 
