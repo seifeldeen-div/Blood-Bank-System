@@ -159,7 +159,16 @@ footer {
 @media screen and (max-width: 1500px) {
     footer {
         .links {
+            gap: 30px;
             justify-content: start !important;
+
+            .contactChild {
+                .contactLastchild {
+                    a {
+                        font-size: 18px !important;
+                    }
+                }
+            }
         }
     }
 }
@@ -180,7 +189,9 @@ footer {
 
                 .contactChild {
                     .contactLastchild {
-                        font-size: 12px !important;
+                        a {
+                            font-size: 16px !important;
+                        }
                     }
                 }
             }
@@ -194,17 +205,34 @@ footer {
     }
 }
 
-@media screen and (max-width: 702px) {
+@media screen and (max-width: 754px) {
     footer {
         .top {
-            .logo {}
-
             .links {
                 justify-content: start !important;
 
                 .link-col {
-                    width: 140px !important;
+                    width: 170px !important;
+
                 }
+
+                .contactChild {
+                    li {
+                        span {
+                            font-size: 11px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 648px) {
+    footer {
+        .top {
+            .links {
+                gap: 5px;
             }
         }
     }
