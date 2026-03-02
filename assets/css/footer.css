@@ -8,3 +8,140 @@
     --footer-back-color: #1E2939;
     --footer-color: #99A1AF;
 }
+
+ul {
+    list-style: none;
+}
+
+footer {
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--footer-back-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .container {
+        width: 85%;
+        margin: auto;
+        height: 100%;
+        /* border: solid; */
+
+        .top {
+            height: 65%;
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                .heading {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+
+                    h2 {
+                        padding: 0 5px;
+                        font-size: 20px;
+                        color: white;
+                    }
+
+                    i {
+                        color: red;
+                        font-size: 15px;
+                    }
+                }
+
+                .para {
+                    p {
+                        line-height: 1.5;
+                        /* padding: 10px; */
+                        color: var(--footer-color);
+                        font-size: 15px;
+                    }
+                }
+
+                width: 20%;
+            }
+
+            .links {
+                width: 75%;
+                display: flex;
+                justify-content: space-around;
+
+                .link-col {
+                    .heading-col {
+                        h3 {
+                            margin: 20px 0;
+                            color: white;
+                        }
+                    }
+
+                    .innerLinks {
+                        ul {
+                            li {
+                                margin: 10px 0;
+
+                                a {
+                                    color: var(--footer-color);
+                                    font-size: 13px;
+
+                                    &:hover {
+                                        color: white;
+                                    }
+                                }
+                            }
+
+                            li:nth-child(4) {
+                                color: #FF645A;
+                                font-size: 13px;
+                            }
+
+                            .contactLastchild {
+                                a {
+                                    font-size: 20px;
+                                    color: red;
+                                }
+                            }
+                        }
+
+                        i {
+                            font-size: 15px;
+                        }
+
+                        i,
+                        span {
+                            color: var(--footer-color);
+                            margin: 0 3px;
+                        }
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.137);
+            text-align: center;
+
+            p {
+                margin: 6px 0;
+                color: var(--footer-color);
+
+                a {
+                    color: rgb(255, 109, 109);
+
+                    /* font-family: Arial, Helvetica, sans-serif; */
+                    &:hover {
+                        color: rgb(151, 151, 255);
+                    }
+                }
+            }
+        }
+    }
+}
