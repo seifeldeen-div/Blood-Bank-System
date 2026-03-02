@@ -1,84 +1,148 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --white--color: #F3F4F6;
-    --red--color: #E7000B;
-    --alt--red-color: #C50007;
-    --blue--color: #2171FF;
-    --green--color: #00BA48;
-    --footer-back-color: #1E2939;
+  --white--color: #f3f4f6;
+  --red--color: #e1000a;
+  --alt--red-color: #c50007;
+  --blue--color: #2171ff;
+  --green--color: #00ba48;
+  --footer-back-color: #1e2939;
 }
 
 /* Header */
 /* Laptop screen */
-header{
-    width:100%;
-    height:400px;
-    background-color: var(--alt--red-color);
+header {
+  width: 100%;
+  height: 63vh;
+  background: linear-gradient(to right, #e4000b, #c70008);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    margin-top: 50px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 
+    h1 {
+      width: 50%;
+      color: white;
+      font-size: 3.8rem;
+      font-weight: bold;
+    }
+
+    p {
+      width: 50%;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: white;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      width: 50%;
+      button {
+        border: none;
+        border-radius: 10px;
+        width: 220px;
+        height: 63px;
+        /* padding:20px 40px; */
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2.3px solid white;
+
+        &#donorRegistration {
+          color: #e2000a;
+          transform: translateX(-10px);
+          background-color: white;
+          &:hover {
+            background-color: rgb(246, 239, 239);
+          }
+        }
+
+        &#requestBlood {
+          color: white;
+          background-color: #9f0712;
+          &:hover {
+            background-color: #82181a;
+          }
+        }
+
+        i {
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+}
+/* Responsive */
+/* tablate screen */
+@media screen and (max-width: 1112px) {
+  header {
+    height: 80vh;
     .content {
-        margin-top: 80px;
-        height: fit-content;
-        width: 50%;
-        text-align: center;
-
-        h1 {
-            color: white;
-            font-size: 3.75rem;
-            font-weight: 800;
-            margin-bottom: 25px;
-        }
-
-        p {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .buttons {
-            width: 60%;
-            margin: auto;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 16px;
-            button{
-                border:none;
-                border-radius:10px;
-                padding:20px 40px;
-                font-size:16.5px;
-                font-weight:400;
-                cursor: pointer;
-                transition: all 0.6s ease;
-                border: 2px solid white;
-
-                &#donorRegistration {
-                    color: #E2000A;
-                }
-
-                &#requestBlood {
-                    color: white;
-                    background-color: #82181A;
-                }
-
-                i {
-                    padding: 0 8px;
-                }
-
+      margin-top: 90px;
+      width: 93%;
+      h1 {
+        width: 100%;
+        text-wrap: none;
+      }
+      p {
+        width: 100%;
+      }
+      .buttons {
+        width: 100%;
+      }
+    }
+  }
+}
+/* Mobile screen */
+@media screen and (max-width: 732px) {
+  header {
+    height:90vh;
+    .content {
+        margin-top:55px;
+      width: 90%;
+      h1 {
+        font-size: 2.89rem;
+        width: 100%;
+      }
+      p {
+        width: 100%;
+        font-size: 1.19rem;
+      }
+      .buttons{
+        width: 100%;
+       a{
+        width: 100%;
+        button{
+            width:100%;
+            font-size: 0.98rem;
+            height:55px;
+            &#donorRegistration{
+                transform: translateX(0px);
+            }
+            &#requestBlood{
+                transform: translateY(10px);
             }
         }
+       }
+      }
     }
+  }
 }
-/* taplate screen */
-@media (max-width:768) {
-}
-/* end header */
+/* End Header */
+/* Start Main */
