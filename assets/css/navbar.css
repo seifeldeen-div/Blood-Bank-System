@@ -22,10 +22,14 @@ body {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    z-index: 999999;
     background-color: var(--nav-background);
     width: 100vw;
-    height: 6vh;
-    box-shadow: 0 0 5px 5px rgb(0 0 0 / 0.2);
+    height: 7vh;
+    /* border: solid; */
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 0.1);
 
     .container {
         width: 85%;
@@ -70,7 +74,7 @@ nav {
         }
 
         .links {
-            width: 60%;
+            width: 70%;
             height: 100%;
             /* border: solid; */
             display: flex;
