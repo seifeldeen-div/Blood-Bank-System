@@ -6,7 +6,7 @@
 
 :root {
   --white--color: #f3f4f6;
-  --red--color: #e1000a;
+  --red--color: #F72330;
   --alt--red-color: #c50007;
   --blue--color: #2171ff;
   --green--color: #00ba48;
@@ -52,6 +52,7 @@ header {
 
     .buttons {
       width: 50%;
+
       button {
         border: none;
         border-radius: 10px;
@@ -68,6 +69,7 @@ header {
           color: #e2000a;
           transform: translateX(-10px);
           background-color: white;
+
           &:hover {
             background-color: rgb(246, 239, 239);
           }
@@ -76,6 +78,7 @@ header {
         &#requestBlood {
           color: white;
           background-color: #9f0712;
+
           &:hover {
             background-color: #82181a;
           }
@@ -88,53 +91,67 @@ header {
     }
   }
 }
+
 /* Responsive */
 /* tablate screen */
 @media screen and (max-width: 1112px) {
   header {
     height: 80vh;
+
     .content {
       margin-top: 90px;
       width: 93%;
+
       h1 {
         width: 100%;
         text-wrap: none;
       }
+
       p {
         width: 100%;
       }
+
       .buttons {
         width: 100%;
       }
     }
   }
 }
+
 /* Mobile screen */
 @media screen and (max-width: 732px) {
   header {
     height: 90vh;
+
     .content {
       margin-top: 55px;
       width: 90%;
+
       h1 {
         font-size: 2.89rem;
         width: 100%;
       }
+
       p {
         width: 100%;
         font-size: 1.19rem;
       }
+
       .buttons {
         width: 100%;
+
         a {
           width: 100%;
+
           button {
             width: 100%;
             font-size: 0.98rem;
             height: 55px;
+
             &#donorRegistration {
               transform: translateX(0px);
             }
+
             &#requestBlood {
               transform: translateY(10px);
             }
@@ -144,5 +161,102 @@ header {
     }
   }
 }
+
 /* End Header */
 /* Start Main */
+/* ******************* */
+/* start our impact */
+.ourImpact{
+  width:100%;
+  height:368px;
+  display:flex;
+  flex-direction:column;
+  align-items: space-between;
+  justify-content: center;
+  gap:12%;
+  h2{
+    font-size:2.25rem;
+    text-align:center;
+    color:#1e2939;
+  }
+  .content{
+    width:95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 1fr;
+    gap:2%;
+    .item{
+    /* width:100%; */
+    padding:50px 40px ;
+    border-radius:15px;
+    box-shadow: 0px 10px  15px #eae3e3;
+    color:white;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    .icon{
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+    #counter{
+      text-align: end;
+      grid-column: 2/3;
+      grid-row:1/2 ;
+    }
+    h4{
+      text-align: end;
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    input{
+      grid-column: 1/3;
+      grid-row: 3/4;
+    }
+    &:hover{
+      transform: scale(1.059);
+    }
+    &:nth-child(1){
+      background-color: var(--blue--color);
+    }
+    &:nth-child(2){
+      background-color: var(--red--color);
+    }
+    &:nth-child(3){
+      background-color: var(--green--color);
+    }
+    }
+  }
+}
+/* >>>>>>>>>>>>>>>>>>>>> */
+/* Responsive */
+/* tablate screen */
+@media screen and  (max-width: 1112px) {
+
+}
+/* Mobile screen */
+@media screen and (max-width: 732px)  {
+  .ourImpact{
+    gap:8%;
+    .content{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3 , 1fr);
+      .item{
+        padding: 0;
+        &:nth-child(1){
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        &:nth-child(2){
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+        &:nth-child(3){
+          grid-column: 1/2;
+          grid-row: 3/4;
+        }
+      }
+    }
+  }
+}
