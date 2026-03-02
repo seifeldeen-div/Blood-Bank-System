@@ -112,9 +112,9 @@ header {
 /* Mobile screen */
 @media screen and (max-width: 732px) {
   header {
-    height:90vh;
+    height: 90vh;
     .content {
-        margin-top:55px;
+      margin-top: 55px;
       width: 90%;
       h1 {
         font-size: 2.89rem;
@@ -124,22 +124,22 @@ header {
         width: 100%;
         font-size: 1.19rem;
       }
-      .buttons{
+      .buttons {
         width: 100%;
-       a{
-        width: 100%;
-        button{
-            width:100%;
+        a {
+          width: 100%;
+          button {
+            width: 100%;
             font-size: 0.98rem;
-            height:55px;
-            &#donorRegistration{
-                transform: translateX(0px);
+            height: 55px;
+            &#donorRegistration {
+              transform: translateX(0px);
             }
-            &#requestBlood{
-                transform: translateY(10px);
+            &#requestBlood {
+              transform: translateY(10px);
             }
+          }
         }
-       }
       }
     }
   }
