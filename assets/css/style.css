@@ -78,3 +78,7 @@ header{
         }
     }
 }
+/* taplate screen */
+@media (max-width:768) {
+}
+/* end header */
