@@ -27,7 +27,7 @@ nav {
     z-index: 999999;
     background-color: var(--nav-background);
     width: 100vw;
-    height: 7vh;
+    height: 8vh;
     /* border: solid; */
     box-shadow: 0 0 5px 5px rgb(0 0 0 / 0.1);
 
