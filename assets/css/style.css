@@ -207,7 +207,7 @@ header {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 2.19rem;
-        font-weight: bold;
+        font-weight: 700;
         transform: translateY(10px);
       }
       h4 {
@@ -247,7 +247,7 @@ header {
       &:nth-child(1) {
         background-color: var(--blue--color);
         input::before{
-          width:72%;
+          width:79%;
         }
       }
       &:nth-child(2) {
@@ -258,8 +258,8 @@ header {
       }
       &:nth-child(3) {
         background-color: var(--green--color);
-         input::before{
-          width:82%;
+          input::before{
+          width:86%;
         }
       }
     }
@@ -273,10 +273,9 @@ header {
     .content {
       .item {
         padding: 15px;
-        #counter {
-        }
         h4 {
           font-size: 0.9rem;
+          white-space: nowrap;
         }
       }
     }
