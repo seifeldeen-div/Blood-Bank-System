@@ -5,15 +5,54 @@
 }
 
 main {
+    position: relative;
     margin-top: 8vh;
     width: 100%;
-    /* background-color: yellow; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 main {
+    /* border: solid; */
+
+    .doneMessage {
+        position: fixed;
+        z-index: 999;
+        width: 10px;
+        height: 10px;
+        top: 5%;
+        left: 15%;
+        transform: translateX(-50%);
+        background-color: red;
+        transition: 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0;
+        opacity: 0;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        pointer-events: none;
+    }
+
+    /* &:hover .doneMessage {
+        animation: registerMessage 2s ease infinite;
+    } */
+
+    .doneMessage.done {
+        animation: registerMessage 2s ease 1;
+    }
+
     .register {
-        width: 100vw;
+        width: 100%;
 
         .container {
             width: 60%;
@@ -96,6 +135,18 @@ main {
                             }
                         }
 
+                        input {
+                            transition: 0.3s ease;
+
+                            &:hover:not(:focus) {
+                                box-shadow: 0 1px 5px 0.5px rgba(0 0 0 / 0.2);
+                            }
+
+                            &:focus {
+                                border: 1px solid rgba(255, 0, 0, 0.573);
+                            }
+                        }
+
                         button[type="submit"] {
                             font-size: 18px;
                             background-color: #E7000B;
@@ -145,6 +196,7 @@ main {
             h3 {
                 font-size: 20px;
                 padding: 5px 0 10px;
+
                 i {
                     margin: 0 3px;
                 }
@@ -155,6 +207,7 @@ main {
         ul {
             li {
                 margin: 7px 0;
+
                 i {
                     margin: 0 3px;
                     color: green;
@@ -166,7 +219,39 @@ main {
     /* end register-info */
 }
 
+/* _____________________Animation__________________ */
+@keyframes registerMessage {
+    25% {
+        opacity: 1;
+        top: 15%;
+    }
+
+    50% {
+        opacity: 1;
+        width: 100px;
+        height: 50px;
+        transform: translateX(-50%);
+        font-size: 20px;
+        top: 15%;
+    }
+
+    75% {
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+        font-size: 0;
+        top: 15%;
+    }
+
+    100% {
+        top: 5%;
+        opacity: 0;
+    }
+}
+
+/* ################################# */
 /* Responsive */
+/* ################################# */
 @media screen and (max-width:1113px) {
     .register {
         margin-top: 100px !important;
@@ -188,6 +273,7 @@ main {
             font-size: 13px;
         }
     }
+
     .btnSubmit {
         button {
             font-size: 15px !important;
