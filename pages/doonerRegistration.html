@@ -11,13 +11,91 @@
 
 <body>
     <nav id="navbar"></nav>
-    <header>
-        <div class="container">
-            header
-        </div>
-    </header>
     <main>
-        <section></section>
+        <section class="register">
+            <div class="container">
+                <div class="heading">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <div class="headingText">
+                        <h2>Donor Registration</h2>
+                        <p>Join our community of life-savers. Fill out the form below to register as a blood donor.</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <div class="name">
+                            <label for="name">Full Name<span>*</span></label>
+                            <input type="text" placeholder="Enter your full name" name="name" id="name" required>
+                        </div>
+                        <div class="nationalId">
+                            <label for="nationalId">National Id<span>*</span></label>
+                            <input type="text" name="nationalId" id="nationalId" placeholder="Enter your national ID"
+                                required>
+                        </div>
+                        <div class="age">
+                            <label for="age">Age<span>*</span></label>
+                            <input type="number" name="age" id="age" placeholder="Enter your age" required>
+                        </div>
+                        <div class="gender">
+                            <label for="gender">Gender<span>*</span></label>
+                            <input list="genderList" name="gender" id="gender" placeholder="Select Gender" required>
+                            <datalist id="genderList">
+                                <option value="Male">
+                                <option value="Female">
+                            </datalist>
+                        </div>
+                        <div class="bloodType">
+                            <label for="bloodType">Blood Type<span>*</span></label>
+                            <input list="bloodList" name="bloodType" id="bloodType" placeholder="Select Blood Type"
+                                required>
+                            <datalist id="bloodList">
+                                <option value="A+">
+                                <option value="A-">
+                                <option value="B+">
+                                <option value="B-">
+                                <option value="AB+">
+                                <option value="AB-">
+                                <option value="O+">
+                                <option value="O-">
+                            </datalist>
+                        </div>
+                        <div class="phoneNumber">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number"
+                                required>
+                        </div>
+                        <div class="city">
+                            <label for="city">City<span>*</span></label>
+                            <input type="text" name="city" id="city" required placeholder="Select City">
+                        </div>
+                        <div class="hospital">
+                            <label for="hospital">Hospital</label>
+                            <input type="text" name="hosital" id="hosital" placeholder="Enter hospital name" required>
+                        </div>
+                        <div class="lastDonation">
+                            <label for="lastDonationdate">Last Donation Date<span>*</span></label>
+                            <input type="date" name="lastDonation" id="lastDonation" placeholder="date">
+                            <p>If this is your first time, select today's date</p>
+                        </div>
+                        <div class="btnSubmit">
+                            <button type="submit" name="btnSubmit" id="btnSubmit"> <i
+                                    class="fa-solid fa-user-plus"></i>Register as Donor</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="registerInfo">
+                    <div class="registerInfo-heading">
+                        <h3><i class="fa-solid fa-code-pull-request"></i>Donation Requirements:</h3>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Age between 18-65 years</li>
+                        <li><i class="fa-solid fa-check"></i>Weight at least 50 kg</li>
+                        <li><i class="fa-solid fa-check"></i>Good general health</li>
+                        <li><i class="fa-solid fa-check"></i>Wait at least 3 months between donations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
     <footer id="footer"></footer>
     <!-- java script files -->

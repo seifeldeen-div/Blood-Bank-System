@@ -4,12 +4,193 @@
     box-sizing: border-box;
 }
 
-header {
+main {
     margin-top: 8vh;
     width: 100%;
-    background-color: yellow;
-    .container {
-        width: 95%;
+    /* background-color: yellow; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    .register {
+        width: 100vw;
+
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+
+            .heading {
+                padding: 20px;
+                margin-bottom: 20px;
+
+                i {
+                    color: red;
+                    width: 65px;
+                    height: 65px;
+                    line-height: 2.5;
+                    border-radius: 50px;
+                    font-size: 25px;
+                    background-color: #FFE2E2;
+                    margin: 10px 0;
+                }
+
+                .headingText {
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 700;
+                        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                        padding: 5px;
+                    }
+
+                    p {
+                        color: #4A5573;
+                    }
+                }
+            }
+
+            .form {
+                width: 100%;
+                /* border: solid; */
+                border-radius: 10px;
+                padding: 20px;
+                text-align: start;
+                box-shadow: 0 5px 11px 0 rgb(0 0 0 / 0.1);
+
+                form {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+
+                    div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin: 5px 0;
+
+                        label {
+                            margin: 10px 0;
+                            font-size: 14px;
+
+                            span {
+                                color: red;
+                            }
+                        }
+
+                        input,
+                        button[type="submit"] {
+                            padding: 10px;
+                            height: 55px;
+                            border: 1px solid rgb(0 0 0 / 0.2);
+                            border-radius: 10px;
+                            outline: none;
+
+                            i {
+                                margin-right: 10px;
+                                font-size: 20px;
+                            }
+                        }
+
+                        button[type="submit"] {
+                            font-size: 18px;
+                            background-color: #E7000B;
+                            outline: none;
+                            color: white;
+                            margin: 20px;
+                            transition: 0.3s ease;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #C10007;
+                            }
+                        }
+                    }
+
+                    .nationalId,
+                    .age,
+                    .gender,
+                    .bloodType,
+                    .city,
+                    .hospital {
+                        width: 48.5%;
+                    }
+
+                    .lastDonation {
+                        p {
+                            margin-top: 15px;
+                            font-size: 12px;
+                            color: #7D7292;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* start register-info */
+    .registerInfo {
+        text-align: start;
+        margin: 20px 0;
         padding: 20px;
+        border-radius: 10px;
+        /* border: solid; */
+        background-color: #c2edf86b;
+
+        .registerInfo-heading {
+            h3 {
+                font-size: 20px;
+                padding: 5px 0 10px;
+                i {
+                    margin: 0 3px;
+                }
+            }
+
+        }
+
+        ul {
+            li {
+                margin: 7px 0;
+                i {
+                    margin: 0 3px;
+                    color: green;
+                }
+            }
+        }
+    }
+
+    /* end register-info */
+}
+
+/* Responsive */
+@media screen and (max-width:1113px) {
+    .register {
+        margin-top: 100px !important;
+
+    }
+}
+
+@media screen and (max-width:695px) {
+    .register {
+        div {
+            width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width:380px) {
+    .registerInfo {
+        li {
+            font-size: 13px;
+        }
+    }
+    .btnSubmit {
+        button {
+            font-size: 15px !important;
+        }
     }
 }
