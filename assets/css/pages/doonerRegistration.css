@@ -22,7 +22,8 @@ a {
 main {
     /* border: solid; */
 
-    .doneMessage {
+    .doneMessage,
+    .errorMessage {
         position: fixed;
         z-index: 999;
         width: 10px;
@@ -43,12 +44,22 @@ main {
         pointer-events: none;
     }
 
-    /* &:hover .doneMessage {
-        animation: registerMessage 2s ease infinite;
-    } */
-
     .doneMessage.done {
-        animation: registerMessage 2s ease 1;
+        animation: registerDoneMessage 3s ease 1;
+    }
+
+    .errorMessage {
+        width: 0;
+        height: 0;
+        top: 9%;
+        left: 50%;
+        opacity: 1;
+        z-index: 9999999999999999999999999999;
+        background-color: #E7000B;
+    }
+
+    .errorMessage.error {
+        animation: registerErrorMessage 2s ease;
     }
 
     .register {
@@ -143,7 +154,7 @@ main {
                             }
 
                             &:focus {
-                                border: 1px solid rgba(255, 0, 0, 0.573);
+                                border: 1px solid rgba(255, 0, 0, 0.455);
                             }
                         }
 
@@ -220,7 +231,7 @@ main {
 }
 
 /* _____________________Animation__________________ */
-@keyframes registerMessage {
+@keyframes registerDoneMessage {
     25% {
         opacity: 1;
         top: 15%;
@@ -246,6 +257,39 @@ main {
     100% {
         top: 5%;
         opacity: 0;
+    }
+}
+
+@keyframes registerErrorMessage {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        font-size: 0;
+    }
+
+    50% {
+        transform: translateX(-50%) ;
+        width: 170px;
+        height: 50px;
+        opacity: 1;
+        font-size: 15px;
+    }
+
+    70% {
+        transform: translateX(-50%) ;
+        width: 170px;
+        height: 50px;
+        opacity: 1;
+        font-size: 15px;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transform: translateX(-50%) ;
+        font-size: 0;
     }
 }
 
