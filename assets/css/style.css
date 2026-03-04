@@ -286,8 +286,8 @@ header {
 /* Mobile screen */
 @media screen and (max-width: 732px) {
   .ourImpact {
-    height: 115vh;
-    gap: 9%;
+    height: 100vh;
+    gap: 5%;
     h2 {
       font-size: 1.88rem;
     }
@@ -295,9 +295,9 @@ header {
       width: 93%;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
-      gap: 4%;
+      gap: 3%;
       .item {
-        padding: 3% 7%;
+        padding: 2% 6%;
         #counter {
           font-size: 2.25rem;
         }
