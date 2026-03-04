@@ -13,13 +13,15 @@ fetch(`${basePath}/components/navbar.html`)
 
         let burgerSign = document.querySelector("#burgerSign");
         let links = document.querySelector("#links");
+        let lis = document.querySelectorAll("#links ul li")
+        let container = document.querySelector(".container")
 
         burgerSign.addEventListener("click", () => {
             // let currentDisplay = window.getComputedStyle(links).display;
-            if (links.style.display === "none")
-                links.style.display = "flex";
-            else
-                links.style.display = "none";
+            container.classList.toggle("active")
+            lis.forEach(li => {
+                li.style.pointerEvents = "all";
+            })
         });
     })
     .catch(err => console.error("Error loading navbar:", err));
