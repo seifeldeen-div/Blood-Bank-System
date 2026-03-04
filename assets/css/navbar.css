@@ -92,25 +92,24 @@ nav {
                 li {
                     height: 100%;
                     /* border: solid; */
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     margin: 0 5px;
 
                     a {
+                        text-align: center;
                         display: inline-block;
                         /* border: solid; */
                         font-size: 14px;
+                        width: 100%;
                         color: white;
                         padding: 10px 20px;
                         border-radius: 8px;
                         transition: 0.3s ease;
 
                         &:hover {
-                            background-color: var(--active-link-style);
-                        }
-
-                        &:active {
                             background-color: var(--active-link-style);
                         }
                     }
@@ -191,16 +190,80 @@ nav {
                     align-items: center;
 
                     li {
+                        width: 100%;
+                        pointer-events: none;
                         padding: 10px 0;
 
+                        a:hover {
+                            background-color: #64000575;
+                        }
+
+                        a:last-child:hover {
+                            color: white;
+                        }
+
                         a {
-                            &:hover {
-                                border-bottom: 2px solid white;
-                            }
+                            transform: translateX(-500px);
+                            border: 1px solid;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+.container.active .links {
+    display: flex;
+    animation: navAnimate 1s ease forwards;
+}
+
+.container.active .link1 {
+    animation: nvLinksAnimate .5s ease forwards 1s;
+}
+
+.container.active .link2 {
+    animation: nvLinksAnimate .5s ease forwards 1.2s;
+}
+
+.container.active .link3 {
+    animation: nvLinksAnimate .5s ease forwards 1.4s;
+}
+
+.container.active .link4 {
+    animation: nvLinksAnimate .5s ease forwards 1.6s;
+}
+
+.container.active .link5 {
+    animation: nvLinksAnimate .5s ease forwards 1.8s;
+}
+
+.container.active .link6 {
+    animation: nvLinksAnimate .5s ease forwards 2s;
+}
+
+.container.active .link7 {
+    animation: nvLinksAnimate .5s ease forwards 2.2s;
+}
+
+@keyframes navAnimate {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 62vh;
+        opacity: 1;
+    }
+}
+
+@keyframes nvLinksAnimate {
+    50% {
+        transform: translateX(-500px);
+    }
+
+    100% {
+        transform: translateX(0px);
     }
 }
