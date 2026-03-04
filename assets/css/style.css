@@ -434,18 +434,19 @@ header {
 /* mobile screen */
 @media screen  and (max-width:690px) {
    .donateBlood{
-    height:150vh;
-    padding:20px 0  ;
+    height:140vh;
+    display: flex;
+    flex-direction: column;
     h2{
        font-size: 1.88rem;
-       margin-bottom: 20px;
+       margin:3% 0;
     }
     .content{
       width:93%;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
       .item{
-        padding:18px;
+        padding:5%;
         &:nth-child(1) {
             grid-column: 1/2;
             grid-row: 1/2;
