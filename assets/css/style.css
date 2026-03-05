@@ -100,7 +100,7 @@ header {
 
     .content {
       margin-top: 90px;
-      width: 93%;
+      padding:10px;
 
       h1 {
         width: 100%;
@@ -121,11 +121,12 @@ header {
 /* Mobile screen */
 @media screen and (max-width: 732px) {
   header {
-    height: 90vh;
+    height: auto;
+    padding:35px 0 ;
 
     .content {
       margin-top: 55px;
-      width: 90%;
+      width: 93%;
 
       h1 {
         font-size: 2.89rem;
@@ -290,6 +291,7 @@ header {
     padding:35px 0 ;
     h2 {
       font-size: 1.88rem;
+      transform: translateY(-50%);
     }
     .content {
       width: 93%;
@@ -408,7 +410,11 @@ header {
 /* Tablate screen */
 @media screen and (max-width: 1112px) {
       .donateBlood{
-        height:80vh;
+        height:auto;
+        padding: 50px 0;
+        h2{
+          transform: translateY(-50%);
+        }
           .content{
             padding:10px;
             height:60vh;
@@ -452,7 +458,7 @@ header {
     h2{
       text-align: center;
        font-size: 1.6rem;
-       margin-bottom: 12px;
+       transform: translateY(-50%);
     }
     .content{
       width:93%;
@@ -486,8 +492,8 @@ header {
 /* Make a Difference  */
 .makeAdifference{
   width:100%;
-  height:48vh;
-  padding:70px 0;
+  height:45vh;
+  padding:50px 0;
   background:#E7000B;
   .content{
     width:95%;
@@ -515,7 +521,7 @@ header {
     }
      .buttons {
       width: 50%;
-      margin-top: 15px;
+      transform: translateY(-5%);
       button {
         border: none;
         border-radius: 10px;
@@ -548,6 +554,72 @@ header {
 
         i {
           padding: 0 8px;
+        }
+      }
+    }
+  }
+}
+/* Responsive */
+/* Tablate Screen */
+@media screen and (max-width:1112px){
+  .makeAdifference{
+    height:auto;
+    padding:40px 0 ;
+    .content{
+      /* padding:10px; */
+      h2{
+        width:100%;
+        font-size:2.25rem;
+        margin-bottom: 25px;
+      }
+      p{
+        width:80%;
+        font-size: 1.19rem;
+        margin-bottom: 25px;
+      }
+      .buttons{
+        width:100%;
+
+      }
+    }
+  }
+}
+/* Mobile Screen */
+@media screen and (max-width: 732px) {
+  .makeAdifference {
+    height:auto;
+    padding:38px 0;
+    .content {
+      width: 93%;
+
+      h2 {
+        font-size:2rem;
+        width: 100%;
+        white-space: none;
+      }
+      
+      p {
+        width: 90%;
+        font-size: 1rem;
+        white-space: none;
+        line-height: 1.3;
+      }
+
+      .buttons {
+        width: 97%;
+        a {
+          width: 100%;
+          button {
+            width: 100%;
+            font-size: 0.98rem;
+            height: 53px;
+            &#donorRegistration {
+              transform: translateX(0px);
+            }
+            &#bloodStock {
+              transform: translateY(15px);
+            }
+          }
         }
       }
     }
