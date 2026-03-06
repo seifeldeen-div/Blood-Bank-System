@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  margin-top: 8vh;
+  width: 100%;
+  font-family:
+    'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  .container {
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+    .heading {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      i {
+        color: red;
+        width: 65px;
+        height: 65px;
+        line-height: 2.5;
+        border-radius: 50px;
+        font-size: 27px;
+        background-color: #ffe2e2;
+        margin: 10px 0;
+      }
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+          'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        padding: 5px;
+      }
+      p {
+        color: #4a5573;
+      }
+    }
+    /* Form  */
+    .form {
+      width: 100%;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0px 11px 0 rgb(0 0 0 / 0.1);
+      background-color: white;
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: 5px 0;
+          label {
+            margin: 10px 0;
+            font-size: 14px;
+
+            span {
+              color: red;
+            }
+          }
+          input,
+          select,
+          textarea {
+            padding: 10px;
+            height: 55px;
+            border: 1px solid rgb(0 0 0 / 0.2);
+            border-radius: 10px;
+            outline: none;
+            &:focus {
+              /* border: 0.2px solid black; */
+              outline: 1.5px solid #e7000b;
+            }
+          }
+
+          textarea {
+            resize: vertical;
+            min-height: 120px;
+          }
+          &.Required-Blood,
+          &.Quantity,
+          &.Hospital-name,
+          &.city {
+            width: 48.5%;
+          }
+          #patient-name:focus {
+            background-color: #e8f0fe;
+          }
+          &.emergency {
+            #emergency-level {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+              button {
+                border: 2px solid #bfc4cc;
+                border-radius: 10px;
+                width: 48.5%;
+                padding: 10px;
+                height: 55px;
+                background-color: white;
+                cursor: pointer;
+                font-size: 16px;
+                transition: all 0.4s ease;
+                opacity:0.89;
+                i {
+                  transform: translateX(-50%);
+                  font-size: 18px;
+                }
+                &#normal {
+                  background-color: #f0fdf4;
+                  border-color: #00c950;
+                  i {
+                    color: #00c950;
+                  }
+                  &:hover {
+                    border-color: #00c950;
+                  }
+                }
+                &#urgent {
+                  i {
+                    color: #fb2c36;
+                  }
+                  &:hover {
+                    border-color: #fb2c36;
+                  }
+                }
+              }
+              .urgentmass {
+                width: 100%;
+                padding: 15px;
+                height: 55px;
+                background-color: #fef2f2;
+                border-radius: 10px;
+                margin-top: 10px;
+                border: 0.8px solid #e7000b;
+                display: none;
+                p {
+                  transform: translateY(30%);
+                  color: #e7000b;
+                  font-size: 15px;
+                  i {
+                    color: orange;
+                    transform: translatex(-50%);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .submit {
+          button {
+            padding: 10px;
+            height: 55px;
+            border-radius: 10px;
+            color: white;
+            transition: all 0.4s ease;
+            border:none;
+            background-color: #e7000b;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 20px 0;
+            i{
+                transform:translateX(-50%) ;
+                &.urgent{
+                    display:none;
+                    color:red;
+                }
+            }
+            &:hover{
+                background-color: #C10007;
+            }
+          }
+        }
+      }
+    }
+    /* request information */
+    .requestInfo{
+        width:100%;
+        padding:20px;
+        background-color: #c2edf86b;
+        border-radius: 10px;
+        margin: 20px 0;
+        h3{
+             font-size: 20px;
+                padding: 5px 0 10px;
+                i{
+                    margin:0 3px;
+                    color:#2560a3;
+                }
+        }
+        p{
+            margin: 7px 0;
+            font-size:15px;
+            i{
+                margin: 0 3px;
+                color:green;
+            }
+        }
+    }
+  }
+  .submitedMassege{
+    width:100%;
+    height:100vh;
+    position: fixed;
+    top:0;left:0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    .massege{
+        background-color: white;
+        border-radius: 10px;
+        flex-direction: column;
+        width:30%;
+        padding:30px;
+        text-align: center;
+        position: relative;
+        animation: scale 2s forwards;
+    i{
+        font-size: 45px;
+        margin-bottom: 30px;
+        color:#00c950;
+        animation:animate 2s forwards ;
+        &.fa-xmark{
+            position: absolute; 
+            color:black;
+            font-size: 15px;
+            top:10px;
+            right:10px;
+            animation: none;
+
+        }
+    }
+    p{
+        color:black;
+        font-size: 17px;
+    }
+    }
+  }
+
+}
+/* Animation submited massege */
+@keyframes scale {
+    0%{
+           transform: scale(0);
+    }
+}
