@@ -5,20 +5,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank --Stock</title>
-    <link rel="stylesheet" href="bloodStock.html">
+    <link rel="stylesheet" href="../assets/css/pages/bloodStock.css">
     <link rel="icon" type="png" href="../assets/imgs/OIP.png">
 </head>
 
 <body>
     <nav id="navbar"></nav>
-    <header></header>
+    <header>
+        <div class="container">
+            <div class="heading-text">
+                <div class="icon">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div class="heading-text-content">
+                    <h2>Blood Stock Availability</h2>
+                    <p>Real-time blood inventory across all blood types</p>
+                </div>
+            </div>
+            <div class="heading-cards">
+                <div class="card">
+                    <div class="card-text">
+                        <p>Total Blood Bags</p>
+                        <h3 class="totalBloodbags">200</h3>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-text">
+                        <p>Blood Types Available</p>
+                        <h3>8</h3>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-text">
+                        <p>Low Stock Alerts</p>
+                        <h3 class="lowStock">3</h3>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <main>
-        <section></section>
+        <section class="bloodCards">
+            <div class="container">
+                <div class="cards">
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>A+</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="65" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>A-</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="18" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>B+</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="39" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>B-</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="8" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>AB+</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="22" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>AB-</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="70" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>O+</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="52" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                    <div class="cardType">
+                        <div class="top">
+                            <div class="text">
+                                <span><i class="fa-solid fa-droplet bloodIcon"></i>O-</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-trend-up rateIcon"></i>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p class="bagsNumber">45</p>
+                            <p>bags available</p>
+                            <input type="range" class="bloodRange" min="0" max="100" value="12" placeholder="range">
+                        </div>
+                        <div class="bottom">
+                            <span class="statueText">STATE</span>
+                            <span>Blood Statue</span>
+                        </div>
+                        <div class="btns">
+                            <button class="push">push</button>
+                            <button class="pull">pull</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer id="footer"></footer>
     <!-- java script files -->
-    <script src="../assets/js/js.js"></script>
     <script src="../assets/js/load.js"></script>
+    <script src="../assets/js/pages/bloodStock.js"></script>
 </body>
 
 </html>

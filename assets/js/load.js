@@ -12,12 +12,13 @@ fetch(`${basePath}/components/navbar.html`)
         document.getElementById("navbar").innerHTML = data;
 
         let burgerSign = document.querySelector("#burgerSign");
-        let links = document.querySelector("#links");
+        // let links = document.querySelector("#links");
         let lis = document.querySelectorAll("#links ul li")
         let container = document.querySelector(".container")
 
         burgerSign.addEventListener("click", () => {
             // let currentDisplay = window.getComputedStyle(links).display;
+            burgerSign.classList.toggle("scale")
             container.classList.toggle("active")
             lis.forEach(li => {
                 li.style.pointerEvents = "all";

@@ -175,9 +175,17 @@ nav {
                 justify-content: space-between;
 
                 .burgerMenue {
+                    cursor: pointer;
+
                     i {
                         display: block;
+                        transition: 0.5s ease;
                     }
+                }
+
+                .burgerMenue.scale {
+                    transform: scale(1.1);
+                    transition: 0.5s ease;
                 }
             }
 

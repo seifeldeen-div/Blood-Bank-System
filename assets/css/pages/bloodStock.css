@@ -1,0 +1,455 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* green  */
+    --green-color: #00C950;
+    --span-bottom-clear-green-color: #B9F8CF;
+    --back-top-clear-green-color: #F0FDF4;
+    /* orange */
+    --orange-color: #F0B100;
+    --span-bottom-clear-orange-color: #FFF085;
+    --back-top-clear-orange-color: #FEFCE8;
+    /* red  */
+    --red-color: #FB2C36;
+    --span-bottom-clear-red-color: #FFC9C9;
+    --back-top-clear-red-color: #FEF2F2;
+
+
+}
+
+header {
+    width: 100%;
+    /* background-color: yellow; */
+    margin-top: 8vh;
+}
+
+header {
+    .container {
+        width: 95%;
+        padding: 20px 0;
+        margin: auto;
+        height: auto;
+        /* border: solid; */
+
+        .heading-text {
+            text-align: center;
+            padding-top: 40px;
+
+            i {
+                color: red;
+                width: 65px;
+                height: 65px;
+                line-height: 2.5;
+                border-radius: 50px;
+                font-size: 25px;
+                background-color: #FFE2E2;
+                margin: 10px 0;
+            }
+
+            .heading-text-content {
+                h2 {
+                    font-size: 40px;
+                    font-weight: 700;
+                    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                    padding: 5px;
+                }
+
+                p {
+                    color: #4A5573;
+                }
+            }
+        }
+
+        .heading-cards {
+            width: 100%;
+            margin: auto;
+            /* border: solid; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            gap: 10px 20px;
+
+            .card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 15px;
+                /* border: solid; */
+                border-radius: 10px;
+                box-shadow: 0 3px 10px 0px rgb(0 0 0 / 0.2);
+                width: 32%;
+
+                .card-text {
+                    p {
+                        color: rgb(74, 85, 101);
+                        padding: 5px 0;
+                    }
+
+                    h3 {
+                        font-size: 30px;
+                        color: rgb(30, 41, 57);
+                    }
+                }
+
+                .card-icon {
+                    width: 50px;
+                    aspect-ratio: 1;
+                    background-color: #DBEAFE;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+
+                    i {
+                        font-size: 20px;
+                        color: blue;
+                    }
+                }
+            }
+
+            .card:nth-child(2) {
+                .card-icon {
+                    background-color: #DBFCE7;
+
+                    i {
+                        color: green;
+                    }
+                }
+            }
+
+            .card:nth-child(3) {
+                .card-icon {
+                    background-color: #FFE2E2;
+
+                    i {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    .bloodCards {
+        width: 100%;
+        /* border: solid; */
+        margin-top: 30px;
+
+        .container {
+            width: 95%;
+            margin: auto;
+
+            .cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px 10px;
+
+                .cardType {
+                    /* width: 345px; */
+                    flex: 1 1 300px;
+                    padding: 20px;
+                    background-color: var(--back-top-clear-green-color);
+                    box-shadow: 0 3px 10px 0px rgb(0 0 0 / 0.2);
+
+                    .top {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #4A5573;
+                            font-size: 25px;
+                            font-weight: 600;
+
+                        }
+
+                        i {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 35px;
+                            aspect-ratio: 1;
+                            background-color: var(--green-color);
+                            border-radius: 50%;
+                            margin-right: 5px;
+                            color: white;
+                            font-size: 15px;
+                        }
+                    }
+
+                    .center {
+                        margin: 15px 0 10px;
+
+                        p:first-child {
+                            color: black;
+                            font-weight: 700;
+                            font-size: 40px;
+                        }
+
+                        p+p {
+                            font-size: 15px;
+                            font-weight: 100;
+                        }
+
+                        input[type="range"] {
+                            -webkit-appearance: none;
+                            width: 100%;
+                            height: 8px;
+                            background: linear-gradient(to right, #ddd 5%, #1db954 95%);
+                            border-radius: 10px;
+                            outline: none;
+                            transition: 0.3 ease;
+                            pointer-events: none;
+                        }
+
+                        input[type="range"]::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            width: 16px;
+                            height: 16px;
+                            background: #1db954;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            transition: 0.3s ease;
+                            /* display: none; */
+                        }
+                    }
+
+                    .bottom {
+                        margin-bottom: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        span:first-child {
+                            /* font-weight: 700; */
+                            background-color: var(--span-bottom-clear-green-color);
+                            padding: 7px 15px;
+                            border-radius: 50px;
+                            font-size: 13px;
+                        }
+
+                        span+span {
+                            font-size: 13px;
+                            color: #4A5573;
+                        }
+                    }
+
+                    .btns {
+                        margin-top: 5px;
+
+                        button {
+                            margin: 0 10px 0 0;
+                            width: 80px;
+                            height: 40px;
+                            outline: none;
+                            text-transform: capitalize;
+                            border-radius: 5px;
+                            border: none;
+                        }
+
+                        .push,
+                        .pull {
+                            background-color: var(--green-color);
+                            color: white;
+                            letter-spacing: 1px;
+                            font-weight: 700;
+                            transition: 0.5s ease;
+                            border: 1px solid;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+
+                        .push {
+                            border-color: var(--green-color);
+
+                            &:hover {
+                                background-color: white;
+                                color: var(--green-color);
+                            }
+                        }
+
+                        .pull {
+                            border-color: var(--orange-color);
+                            background-color: var(--orange-color);
+
+                            &:hover {
+                                background-color: white;
+                                color: var(--orange-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------Danger Statue---------------- */
+.cardType.cardColorstatueDanger {
+    background-color: var(--back-top-clear-red-color) !important;
+
+    .bloodIcon {
+        background-color: var(--red-color) !important;
+        transition: 0.5s ease;
+    }
+
+    .rateIcon {
+        background-color: var(--red-color) !important;
+        transition: 0.5s ease;
+    }
+
+    .statueText {
+        background-color: var(--span-bottom-clear-red-color) !important;
+        transition: 0.5s ease;
+    }
+
+    input[type="range"] {
+        background: linear-gradient(to right, #ddd 5%, #FB2C36 95%) !important;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        background: var(--red-color) !important;
+    }
+
+
+    transition: 0.5s ease;
+}
+
+/* ------------------------Suit Statue-------------- */
+.cardType.cardColorstatueSuit {
+    background-color: var(--back-top-clear-orange-color) !important;
+    transition: 0.5s ease;
+
+    .bloodIcon {
+        background-color: var(--orange-color) !important;
+        transition: 0.5s ease;
+    }
+
+    .rateIcon {
+        background-color: var(--orange-color) !important;
+        transition: 0.5s ease;
+    }
+
+    .statueText {
+        background-color: var(--span-bottom-clear-orange-color) !important;
+        transition: 0.5s ease;
+    }
+
+    input[type="range"] {
+        background: linear-gradient(to right, #ddd 5%, #F0B100 95%) !important;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        background: var(--orange-color) !important;
+    }
+
+    transition: 0.3s ease;
+}
+
+/* ------------------------Safe Statue-------------- */
+.cardType.cardColorstatueSafe {
+    background-color: var(--back-top-clear-green-color) !important;
+    transition: 0.5s ease;
+
+    .bloodIcon {
+        background-color: var(--green-color) !important;
+        transition: 0.5s ease;
+    }
+
+    .rateIcon {
+        background-color: var(--green-color) !important;
+        transition: 0.5s ease;
+    }
+
+    .statueText {
+        background-color: var(--span-bottom-clear-green-color) !important;
+        transition: 0.5s ease;
+    }
+
+    input[type="range"] {
+        background: linear-gradient(to right, #ddd 5%, #00C950 95%) !important;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        background: var(--green-color) !important;
+    }
+
+    transition: 0.3s ease;
+
+}
+
+
+/* ############################## */
+/* responsive header  */
+@media screen and (max-width: 964px) {
+    header {
+        margin-top: 10vh;
+
+        .container {
+            .heading-cards {
+                flex-wrap: wrap;
+                justify-content: center !important;
+
+                /* border: solid; */
+                .card {
+                    /* margin-bottom: 20px !important; */
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 701px) {
+    header {
+        .container {
+            .heading-cards {
+                flex-wrap: wrap !important;
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100% !important;
+                /* border: solid; */
+            }
+        }
+    }
+}
+
+/* ############################## */
+/* #################################### */
+/* responsive bloodCards */
+/* @media screen and (max-width:1485px) {
+    .bloodCards {
+        .container {
+            .cards {
+                .card {
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1410px) {
+    .bloodCards {
+        .cards {
+            flex-wrap: wrap;
+        }
+    }
+} */
+
+/* #################################### */
