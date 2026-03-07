@@ -26,45 +26,45 @@
                  <div class="patient-name">
                     <label for="patient-name">Patient Name <span>*</span></label>
                     <input name="patient name" maxlength="30" type="text" id="patient-name" placeholder="Enter Patient`s full name" required >
-                    <span class="error"></span>
+                    <span class="error">patient name is required</span>
                  </div>
                  <div class="Required-Blood">
                     <label for="Required-Blood">Required Blood Type <span>*</span></label>
-                    <select name="Blood Type" id="Required-Blood">
+                    <select  name="Blood Type" id="Required-Blood" required>
                         <option value="">Select Blood Type </option>
-                        <option value="">A+</option>
-                        <option value="">A-</option>
-                        <option value="">B+</option>
-                        <option value="">B+</option>
-                        <option value="">AB+</option>
-                        <option value="">AB+</option>
-                        <option value="">O+</option>
-                        <option value="">O-</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B+">B+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
                     </select>
-                    <span class="error"></span>
+                    <span class="error">Blood type is required</span>
                  </div>
                  <div class="Quantity">
                     <label for="Quantity">Quantity (Number of Bags) <span>*</span></label>
                     <input name="Quantity" type="number" id="Quantity" min="1" max="10" placeholder="Number of bags needed" required >
-                    <span class="error"></span>
+                    <span class="error">Quantity is required</span>
                  </div>
                  <div class="Hospital-name">
                     <label for="Hospital-name">Hospital Name <span>*</span></label>
                     <input name="Hospital Name" type="text" id="Hospital-name" placeholder="Enter Hospital name" required>
-                    <span class="error"></span>
+                    <span class="error">Hospital name is required</span>
                  </div>
                  <div class="city">
                     <label for="City">City <span>*</span></label>
-                    <select name="city" id="city">
-                    <option value="">Select City</option>
-                    <option value="">Cairo</option>
-                    <option value="">Alexandria</option>
-                    <option value="">Luxer</option>
-                    <option value="">Aswan</option>
-                    <option value="">Port Said</option>
-                    <option value="">Suze</option>
+                    <select name="city" id="city" required>
+                    <option value="Select City">Select City</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Luxer">Luxer</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="Port Said">Port Said</option>
+                    <option value="Suze">Suze</option>
                 </select>
-                <span class="error"></span>
+                <span class="error">City is required</span>
                  </div>
                  <div class="emergency">
                     <label for="emergency-level">Emergency Level <span>*</span></label>
@@ -79,6 +79,7 @@
                  <div class="phone">
                     <label for="Phone-Number">Contact Phone Number <span>*</span></label>
                     <input type="text" name="Phone number"  placeholder="Enter Contact Phone Number" required>
+                    <span class="error">Phone number is required</span>
                  </div>
                  <div class="additionalinfo">
                     <label for="add-info">Additional Information (Optional)</label>
@@ -103,18 +104,29 @@
                 <span><i class="fa-solid fa-circle-check"></i></span>
                 <p>Your request has been submitted successfully</p>
                 <span><i class="fa-solid fa-xmark"></i></span>
+                <div class="content">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
              </div>
         </div>
         <!-- Not Submit Registration -->
         <div class="fix">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p>Please Fill this Request</p>
             <span><i class="fa-solid fa-xmark"></i></span>
+            <p>Please Fill this Request</p>
+            <i class="fa-solid fa-circle-exclamation"></i>
         </div>
     </main>
     <footer id="footer"></footer>
     <!-- java script files -->
-    <script src="../assets/js/js.js"></script>
+    <script src="../assets/js/pages/requestRegistration.js"></script>
     <script src="../assets/js/load.js"></script>
 </body>
 
