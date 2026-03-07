@@ -8,12 +8,21 @@ let pushBtn = document.querySelectorAll(".push")
 let pullBtn = document.querySelectorAll(".pull")
 let totalBloodbags = document.querySelector(".totalBloodbags")
 let lowStock = document.querySelector(".lowStock")
+let flibCards = document.querySelectorAll(".flib-card")
+
+flibCards.forEach((card)=> {
+    card.addEventListener("click",(e)=> {
+        e.preventDefault()
+        card.classList.toggle("flibActive")
+    })
+})
 
 cards.forEach((card, index) => {
     bagsNumber[index].innerHTML = inputRange[index].value
     rangeStatue(index)
     updateBagsnumber()
     updateLowstock()
+    rangeStatueFlibcard(index)
 })
 
 cards.forEach((card, index) => {
@@ -26,6 +35,7 @@ cards.forEach((card, index) => {
         rangeStatue(index)
         updateBagsnumber()
         updateLowstock()
+        rangeStatueFlibcard(index)
     })
     pullBtn[index].addEventListener("click", function (e) {
         e.preventDefault()
@@ -35,6 +45,7 @@ cards.forEach((card, index) => {
         rangeStatue(index)
         updateBagsnumber()
         updateLowstock()
+        rangeStatueFlibcard(index)
     })
 
     inputRange[index].addEventListener("input", () => {
@@ -42,6 +53,7 @@ cards.forEach((card, index) => {
         rangeStatue(index)
         updateBagsnumber()
         updateLowstock()
+        rangeStatueFlibcard(index)
     })
 })
 
@@ -60,6 +72,19 @@ function rangeStatue(index) {
         cards[index].classList.add("cardColorstatueSafe")
     }
 }
+
+function rangeStatueFlibcard(index) {
+    flibCards[index].classList.remove("flibcardColorstatueDanger", "flibcardColorstatueSuit", "flibcardColorstatueSafe")
+    if (inputRange[index].value < 31) {
+        flibCards[index].classList.add("flibcardColorstatueDanger")
+    } else if (inputRange[index].value >= 31 && inputRange[index].value < 61) {
+        flibCards[index].classList.add("flibcardColorstatueSuit")
+    } else {
+        flibCards[index].classList.add("flibcardColorstatueSafe")
+    }
+}
+
+
 function updateBagsnumber() {
     totalBags = 0
     bagsNumber.forEach((bag, index) => {

@@ -29,40 +29,11 @@ header {
 
 header {
     .container {
-        width: 95%;
+        width: 85%;
         padding: 20px 0;
         margin: auto;
         height: auto;
         /* border: solid; */
-
-        .heading-text {
-            text-align: center;
-            padding-top: 40px;
-
-            i {
-                color: red;
-                width: 65px;
-                height: 65px;
-                line-height: 2.5;
-                border-radius: 50px;
-                font-size: 25px;
-                background-color: #FFE2E2;
-                margin: 10px 0;
-            }
-
-            .heading-text-content {
-                h2 {
-                    font-size: 40px;
-                    font-weight: 700;
-                    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-                    padding: 5px;
-                }
-
-                p {
-                    color: #4A5573;
-                }
-            }
-        }
 
         .heading-cards {
             width: 100%;
@@ -135,6 +106,35 @@ header {
     }
 }
 
+.heading-text {
+    text-align: center;
+    padding: 20px;
+
+    i {
+        color: red;
+        width: 65px;
+        height: 65px;
+        line-height: 2.5;
+        border-radius: 50px;
+        font-size: 25px;
+        background-color: #FFE2E2;
+        margin: 10px 0;
+    }
+
+    .heading-text-content {
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            padding: 5px;
+        }
+
+        p {
+            color: #4A5573;
+        }
+    }
+}
+
 main {
     .bloodCards {
         width: 100%;
@@ -142,7 +142,7 @@ main {
         margin-top: 30px;
 
         .container {
-            width: 95%;
+            width: 85%;
             margin: auto;
 
             .cards {
@@ -295,9 +295,125 @@ main {
             }
         }
     }
+
+    .blood-guide {
+        /* border: solid; */
+        width: 100%;
+        margin: 20px 0 40px;
+
+        .container {
+            padding: 20px 0;
+            width: 85%;
+            margin: auto;
+
+            .blood-flib-cards {
+                position: relative;
+                /* border: solid; */
+                margin-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+
+                .flib-card {
+                    /* position: absolute; */
+                    /* border: solid; */
+                    /* background-color: red; */
+                    /* width: 200px; */
+                    aspect-ratio: 1;
+                    transform-style: preserve-3d;
+                    transition: 0.5s ease;
+                    border-radius: 20px;
+                    flex: 1 1 200px;
+                    cursor: pointer;
+
+                    &.flibActive {
+                        transform: rotateY(180deg);
+                        /* pointer-events: none; */
+                    }
+
+                    .front-face {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        backface-visibility: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        p:first-child {
+                            padding: 10px;
+                            padding-top: 0;
+                            font-size: 50px;
+                            font-weight: 900;
+                            color: white;
+                        }
+
+                        p+p {
+                            color: white;
+                        }
+                    }
+
+                    .back-face {
+                        padding: 10px;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        backface-visibility: hidden;
+                        transform: rotateY(180deg);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            text-align: center;
+                            color: white;
+                            padding: 5px;
+                            /* margin-top: 5px; */
+                            font-size: 11px;
+                            letter-spacing: 1px;
+                            line-height: 1.5;
+                            text-transform: uppercase;
+                            font-family: sans-serif;
+                        }
+
+                        .innerFlib {
+                            padding: 10px 15px;
+                            margin-top: 10px;
+                            border: none;
+                            border-radius: 5px;
+                            /* font-weight: 600; */
+                            background-color: white;
+                            /* color: red; */
+                            width: 100%;
+                            display: inline-block;
+                            text-align: center;
+                            transition: 0.3s ease;
+                            overflow: hidden;
+
+                            &:hover {
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* ---------------------Danger Statue---------------- */
+.flib-card.flibcardColorstatueDanger {
+    background-color: var(--red-color);
+
+    .innerFlib {
+        color: var(--red-color);
+    }
+}
+
 .cardType.cardColorstatueDanger {
     background-color: var(--back-top-clear-red-color) !important;
 
@@ -329,6 +445,14 @@ main {
 }
 
 /* ------------------------Suit Statue-------------- */
+.flib-card.flibcardColorstatueSuit {
+    background-color: var(--orange-color);
+
+    .innerFlib {
+        color: var(--orange-color);
+    }
+}
+
 .cardType.cardColorstatueSuit {
     background-color: var(--back-top-clear-orange-color) !important;
     transition: 0.5s ease;
@@ -360,6 +484,14 @@ main {
 }
 
 /* ------------------------Safe Statue-------------- */
+.flib-card.flibcardColorstatueSafe {
+    background-color: var(--green-color);
+
+    .innerFlib {
+        color: var(--green-color);
+    }
+}
+
 .cardType.cardColorstatueSafe {
     background-color: var(--back-top-clear-green-color) !important;
     transition: 0.5s ease;
