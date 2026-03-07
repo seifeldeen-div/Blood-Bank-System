@@ -3,7 +3,9 @@
 const form = document.getElementById("form");
 const submitBtn = document.getElementById("sumbit");
 const fixMsg = document.querySelector(".fix");
-const successMsg = document.querySelector(".submitedMassege");
+const successMsgNormal = document.querySelector(".submitedMassege");
+const successMsgUrgent =document.querySelector(".submitedMassegeUrgent");
+// const SubmitMass =document.querySelectorAll(".SubmitMass");
 
  
 const normalBtn = document.getElementById("normal");
@@ -27,7 +29,7 @@ const fields = [
     customError: "Quantity must be between 1 and 10",
   },
   { selector: "#Hospital-name",  name: "hospital name" },
-  { selector: "#city",           name: "city" },
+  { selector: "#city",  name: "city" },
   {
     selector: 'input[name="Phone number"]',
     name: "phone number",
@@ -42,7 +44,7 @@ function showError(input, msg) {
   input.style.outline = "1.5px solid #e7000b";
   if (errorSpan) {
     if (msg) errorSpan.textContent = msg;
-    errorSpan.style.visibility = "visible";  
+    errorSpan.style.display = "block";  
   }
 }
 
@@ -50,7 +52,7 @@ function showError(input, msg) {
 function hideError(input) {
   const errorSpan = input.parentElement.querySelector(".error");
   input.style.outline = "";
-  if (errorSpan) errorSpan.style.visibility = "hidden"; 
+  if (errorSpan) errorSpan.style.display = "none"; 
 }
 
  
@@ -121,12 +123,20 @@ function showFixMsg() {
   }, 4000);
 }
 
- 
-const closeSuccessBtn = successMsg.querySelector(".fa-xmark")?.closest("span, i");
+//  close btn to successMsgNormal
+const closeSuccessBtn = successMsgNormal.querySelector(".fa-xmark")?.closest("span, i");
 if (closeSuccessBtn) {
   closeSuccessBtn.style.cursor = "pointer";
   closeSuccessBtn.addEventListener("click", () => {
-    successMsg.style.display = "none";
+    successMsgNormal.style.display = "none";
+  });
+}
+// close btn to closeUrgentBtn
+const closeUrgentBtn = successMsgUrgent.querySelector(".fa-xmark")?.closest("span, i");
+if (closeUrgentBtn) {
+  closeUrgentBtn.style.cursor = "pointer";
+  closeUrgentBtn.addEventListener("click", () => {
+    successMsgUrgent.style.display = "none";
   });
 }
 
@@ -157,8 +167,7 @@ form.addEventListener("submit", (e) => {
     showFixMsg();
     return;
   }
-
-    const liItems = successMsg.querySelectorAll(".content ul li");
+  
   const bloodVal  = document.querySelector("#Required-Blood").value;
   const qtyVal    = document.querySelector("#Quantity").value;
   const cityVal   = document.querySelector("#city").value;
@@ -173,18 +182,32 @@ form.addEventListener("submit", (e) => {
     { label: "Hospital",  val: hospitalVal },
     { label: "City",      val: cityVal },
     { label: "Phone",     val: phoneVal },
-    { label: "Priority",  val: emergencyLevel.charAt(0).toUpperCase() + emergencyLevel.slice(1) },
   ];
 
-  liItems.forEach((li, i) => {
-    if (labels[i]) {
-      li.innerHTML = `<strong>${labels[i].label}:</strong> ${labels[i].val}`;
+  [successMsgNormal, successMsgUrgent].forEach((popup) => {
+  popup.querySelectorAll(".content ul li").forEach((li, i) => {
+    if (emergencyLevel != "Urgent"){
+      if (labels[i]) {
+        li.innerHTML = `<span style="color:green;">${labels[i].label}:</span> ${labels[i].val}`;
+      }
+    }
+    else{
+      if (labels[i]) {
+        li.innerHTML = `<span style="color:red;">${labels[i].label}:</span> ${labels[i].val}`;
+      }
+
     }
   });
-
-  successMsg.style.display = "flex";
-  form.reset();
-
+});
+  if( emergencyLevel != "urgent"){
+// Normal
+successMsgNormal.style.display = "flex";
+  }
+// Urgent
+ else{
+successMsgUrgent.style.display = "flex";
+}
+form.reset();
   emergencyLevel = "normal";
   urgentMass.style.display = "none";
   urgentIconInSubmit.style.display = "none";

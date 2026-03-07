@@ -15,80 +15,86 @@
 <body>
     <nav id="navbar"></nav>
     <main>
-        <section class="container">
-            <div class="heading">
+         <div class="register">
+            <section class="container">
+                <div class="heading">
                     <i class=" heart fa-solid fa-heart-pulse"></i>
-                <h2>Request Blood</h2>
-                <p>Submit a blood request for a patient in need. We'll connect you with available donors.</p>
-            </div>
+                    <h2>Request Blood</h2>
+                    <p>Submit a blood request for a patient in need. We'll connect you with available donors.</p>
+                </div>
                 <div class="form">
-                <form action="" id="form" novalidate>
-                 <div class="patient-name">
-                    <label for="patient-name">Patient Name <span>*</span></label>
-                    <input name="patient name" maxlength="30" type="text" id="patient-name" placeholder="Enter Patient`s full name" required >
-                    <span class="error">patient name is required</span>
-                 </div>
-                 <div class="Required-Blood">
-                    <label for="Required-Blood">Required Blood Type <span>*</span></label>
-                    <select  name="Blood Type" id="Required-Blood" required>
-                        <option value="">Select Blood Type </option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B+">B+</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB+">AB+</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
-                    </select>
-                    <span class="error">Blood type is required</span>
-                 </div>
-                 <div class="Quantity">
-                    <label for="Quantity">Quantity (Number of Bags) <span>*</span></label>
-                    <input name="Quantity" type="number" id="Quantity" min="1" max="10" placeholder="Number of bags needed" required >
-                    <span class="error">Quantity is required</span>
-                 </div>
-                 <div class="Hospital-name">
-                    <label for="Hospital-name">Hospital Name <span>*</span></label>
-                    <input name="Hospital Name" type="text" id="Hospital-name" placeholder="Enter Hospital name" required>
-                    <span class="error">Hospital name is required</span>
-                 </div>
-                 <div class="city">
-                    <label for="City">City <span>*</span></label>
-                    <select name="city" id="city" required>
-                    <option value="Select City">Select City</option>
-                    <option value="Cairo">Cairo</option>
-                    <option value="Alexandria">Alexandria</option>
-                    <option value="Luxer">Luxer</option>
-                    <option value="Aswan">Aswan</option>
-                    <option value="Port Said">Port Said</option>
-                    <option value="Suze">Suze</option>
-                </select>
-                <span class="error">City is required</span>
-                 </div>
-                 <div class="emergency">
-                    <label for="emergency-level">Emergency Level <span>*</span></label>
-                    <div class="buttons" id="emergency-level">
-                        <button id="normal"><i class="fa-solid fa-square-check"></i>Normal</button>
-                        <button id="urgent"><i class="fa-solid fa-land-mine-on"></i>Urgent</button>
-                        <div class="urgentmass">
-                            <p><i class="fa-solid fa-triangle-exclamation"></i>This request will be marked as URGENT and prioritized for immediate processing.</p>
+                    <form action="" id="form" novalidate>
+                        <div class="patient-name">
+                            <label for="patient-name">Patient Name <span>*</span></label>
+                            <input name="patient name" maxlength="30" type="text" id="patient-name"
+                                placeholder="Enter Patient`s full name" required>
+                            <span class="error">patient name is required</span>
                         </div>
-                    </div>
-                 </div>
-                 <div class="phone">
-                    <label for="Phone-Number">Contact Phone Number <span>*</span></label>
-                    <input type="text" name="Phone number"  placeholder="Enter Contact Phone Number" required>
-                    <span class="error">Phone number is required</span>
-                 </div>
-                 <div class="additionalinfo">
-                    <label for="add-info">Additional Information (Optional)</label>
-                    <textarea name="additionalinfo" id="add-info"  placeholder="Any addiyional information about the patient or request..."></textarea>
-                 </div>
-                 <div class="submit">
-                 <button  type="submit" class="submit" id="sumbit"><i class="fa-solid fa-heart-pulse"></i> <i class=" urgent fa-solid fa-land-mine-on"></i>Submit Request</button>
-                 </div>
-                </form>
+                        <div class="Required-Blood">
+                            <label for="Required-Blood">Required Blood Type <span>*</span></label>
+                            <select name="Blood Type" id="Required-Blood" required>
+                                <option value="">Select Blood Type </option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">B+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                            <span class="error">Blood type is required</span>
+                        </div>
+                        <div class="Quantity">
+                            <label for="Quantity">Quantity (Number of Bags) <span>*</span></label>
+                            <input name="Quantity" type="number" id="Quantity" min="1" max="10" placeholder="Number of bags needed"
+                                required>
+                            <span class="error">Quantity is required</span>
+                        </div>
+                        <div class="Hospital-name">
+                            <label for="Hospital-name">Hospital Name <span>*</span></label>
+                            <input name="Hospital Name" type="text" id="Hospital-name" placeholder="Enter Hospital name" required>
+                            <span class="error">Hospital name is required</span>
+                        </div>
+                        <div class="city">
+                            <label for="city">City <span>*</span></label>
+                            <select name="city" id="city" required>
+                                <option value="">Select City</option>
+                                <option value="Cairo">Cairo</option>
+                                <option value="Alexandria">Alexandria</option>
+                                <option value="Luxer">Luxer</option>
+                                <option value="Aswan">Aswan</option>
+                                <option value="Port Said">Port Said</option>
+                                <option value="Suze">Suze</option>
+                            </select>
+                            <span class="error">City is required</span>
+                        </div>
+                        <div class="emergency">
+                            <label for="emergency-level">Emergency Level <span>*</span></label>
+                            <div class="buttons" id="emergency-level">
+                                <button id="normal"><i class="fa-solid fa-square-check"></i>Normal</button>
+                                <button id="urgent"><i class="fa-solid fa-land-mine-on"></i>Urgent</button>
+                                <div class="urgentmass">
+                                    <p><i class="fa-solid fa-triangle-exclamation"></i>This request will be marked as URGENT and
+                                        prioritized for immediate processing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <label for="Phone-Number">Contact Phone Number <span>*</span></label>
+                            <input type="text" name="Phone number" placeholder="Enter Contact Phone Number" required>
+                            <span class="error">Phone number is required</span>
+                        </div>
+                        <div class="additionalinfo">
+                            <label for="add-info">Additional Information (Optional)</label>
+                            <textarea name="additionalinfo" id="add-info"
+                                placeholder="Any addiyional information about the patient or request..."></textarea>
+                        </div>
+                        <div class="submit">
+                            <button type="submit" class="submit" id="sumbit"><i class="fa-solid fa-heart-pulse"></i> <i
+                                    class=" urgent fa-solid fa-land-mine-on"></i>Submit Request</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="requestInfo">
                     <h3><i class="fa-solid fa-circle-exclamation"></i>Request Information:</h3>
@@ -97,9 +103,10 @@
                     <p><i class="fa-solid fa-check"></i> You will be contacted once compatible blood is available</p>
                     <p><i class="fa-solid fa-check"></i> Make sure all information is accurate</p>
                 </div>
-        </section>
-        <!-- Submit Registration -->
-        <div class="submitedMassege">
+            </section>
+         </div>
+        <!-- Submit Registration normal  -->
+        <div class="submitedMassege SubmitMass">
              <div class="massege">
                 <span><i class="fa-solid fa-circle-check"></i></span>
                 <p>Your request has been submitted successfully</p>
@@ -112,14 +119,34 @@
                         <li></li>
                         <li></li>
                         <li></li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+        <!--Submit Registration urgent  -->
+        <div class="submitedMassegeUrgent" >
+            <div class="massege">
+                <span><i class="fa-solid fa-xmark"></i></span>
+                <img src="../assets/imgs/urgent.png" alt="">
+                <p>Your request has been submitted successfully</p>
+                <div class="content">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                         <li></li>
                     </ul>
+                </div>
+                <div class="urgent">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i>This request will be marked as URGENT and prioritized for
+                        immediate processing.</p>
                 </div>
              </div>
         </div>
         <!-- Not Submit Registration -->
         <div class="fix">
-            <span><i class="fa-solid fa-xmark"></i></span>
             <p>Please Fill this Request</p>
             <i class="fa-solid fa-circle-exclamation"></i>
         </div>
