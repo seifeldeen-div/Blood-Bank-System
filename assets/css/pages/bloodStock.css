@@ -327,6 +327,7 @@ main {
                     border-radius: 20px;
                     flex: 1 1 200px;
                     cursor: pointer;
+                    height: 230px;
 
                     &.flibActive {
                         transform: rotateY(180deg);
