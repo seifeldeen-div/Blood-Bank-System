@@ -210,7 +210,7 @@ main {
                             border-radius: 10px;
                             outline: none;
                             transition: 0.3 ease;
-                            pointer-events: none;
+                            /* pointer-events: none; */
                         }
 
                         input[type="range"]::-webkit-slider-thumb {
