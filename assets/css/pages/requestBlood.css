@@ -478,6 +478,7 @@ main {
   main {
     .register {
       .container {
+        width:100%;
         .form {
           form {
             div {
@@ -487,16 +488,18 @@ main {
         }
       }
     }
+    .fix{
+  top:80px;
+ }
   }
 }
 
 @media screen and (max-width:380px) {
-    .registerInfo {
-        li {
-            font-size: 13px;
-        }
-    }
-
+ main{
+    .fix{
+  top:80px;
+  }
+ }
     .btnSubmit {
         button {
             font-size: 15px !important;
