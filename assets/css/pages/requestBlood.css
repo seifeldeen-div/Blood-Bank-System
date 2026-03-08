@@ -101,6 +101,9 @@ main {
                 transition: all 0.3s ease;
               }
             }
+            /* select{
+              padding-right:8px;
+            } */
 
             textarea {
               resize: vertical;
@@ -216,12 +219,12 @@ main {
           font-size: 20px;
           padding: 5px 0 10px;
           i {
-            margin: 0 3px;
+            padding: 0 10px 0 0;
             color: #2560a3;
           }
         }
         p {
-          margin: 7px 0;
+          margin: 20px 0;
           font-size: 15px;
           i {
             margin: 0 3px;
@@ -417,6 +420,9 @@ main {
     margin-top: 0;
     .register {
       margin-top: 100px ;
+      .container{
+        width:75%;
+      }
     }
     .fix {
       width: 300px;
