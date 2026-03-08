@@ -160,14 +160,13 @@ main {
                 .urgentmass {
                   width: 100%;
                   padding: 15px;
-                  height: 55px;
                   background-color: #fef2f2;
                   border-radius: 10px;
                   margin-top: 10px;
                   border: 0.8px solid #e7000b;
                   display: none;
                   p {
-                    transform: translateY(30%);
+                    /* transform: translateY(30%); */
                     color: #e7000b;
                     font-size: 15px;
                     i {
@@ -315,7 +314,7 @@ main {
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         animation: animate 2s forwards;
       }
       i.fa-xmark {
@@ -417,43 +416,7 @@ main {
   main {
     margin-top: 0;
     .register {
-      margin-top: 100px !important;
-      .container {
-        .form {
-          form {
-            div {
-              &.emergency {
-                #emergency-level {
-                  .urgentmass {
-                    width: 100%;
-                    padding: 15px;
-                    height: 55px;
-                    background-color: #fef2f2;
-                    border-radius: 10px;
-                    margin-top: 10px;
-                    border: 0.8px solid #e7000b;
-                    display: none;
-                    p {
-                      color: #e7000b;
-                      font-size: 15px;
-                      i {
-                        color: orange;
-                        transform: translatex(-50%);
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        .requestInfo {
-          p {
-            font-size: 13px;
-            white-space: none;
-          }
-        }
-      }
+      margin-top: 100px ;
     }
     .fix {
       width: 300px;
@@ -461,9 +424,9 @@ main {
     }
     .submitedMassege,
     .submitedMassegeUrgent {
-      margin-top: 70px !important;
+      margin-top: 60px;
       .massege {
-        width: 50%;
+        width: 60%;
         padding: 20px;
         .content {
           li {
@@ -472,13 +435,22 @@ main {
         }
       }
     }
+    .submitedMassegeUrgent {
+      .massege {
+        img {
+          margin-bottom: 0px;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 695px) {
   main {
+    margin-top: 0;
     .register {
+      margin-top: 100px;
       .container {
-        width:100%;
+        width: 100%;
         .form {
           form {
             div {
@@ -488,21 +460,61 @@ main {
         }
       }
     }
-    .fix{
-  top:80px;
- }
+    .fix {
+      top: 80px;
+    }
+    .submitedMassege,
+    .submitedMassegeUrgent {
+      margin-top: 20px !important;
+      .massege {
+        width: 70%;
+        padding: 20px;
+        .content {
+          li {
+            padding: 5px;
+          }
+        }
+      }
+    }
+    .submitedMassegeUrgent {
+      .massege {
+        img {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width:380px) {
- main{
-    .fix{
-  top:80px;
-  }
- }
-    .btnSubmit {
-        button {
-            font-size: 15px !important;
-        }
+@media screen and (max-width: 380px) {
+  main {
+    .fix {
+      top: 80px;
     }
+    .submitedMassege,
+    .submitedMassegeUrgent {
+      margin-top: 20px !important;
+      .massege {
+        width: 80%;
+        padding: 20px;
+        .content {
+          li {
+            padding: 5px;
+          }
+        }
+      }
+    }
+    .submitedMassegeUrgent {
+      .massege {
+        img {
+          margin-bottom: 0px;
+        }
+        .urgent {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
 }

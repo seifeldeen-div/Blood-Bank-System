@@ -186,7 +186,7 @@ form.addEventListener("submit", (e) => {
 
   [successMsgNormal, successMsgUrgent].forEach((popup) => {
   popup.querySelectorAll(".content ul li").forEach((li, i) => {
-    if (emergencyLevel != "Urgent"){
+    if (emergencyLevel != "urgent"){
       if (labels[i]) {
         li.innerHTML = `<span style="color:green;">${labels[i].label}:</span> ${labels[i].val}`;
       }
