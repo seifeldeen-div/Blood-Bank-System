@@ -16,9 +16,9 @@ form.addEventListener("submit", (e) => {
     else {
         e.preventDefault()
         SubmitMessage.classList.add("done")
-        setTimeout(()=>{
+        setTimeout(() => {
             SubmitMessage.classList.remove("done")
-        },1000)
+        }, 1000)
         form.reset()
         counter.textContent = ""
     }
@@ -27,6 +27,13 @@ form.addEventListener("submit", (e) => {
 magicContactbtn.addEventListener("click", (e) => {
     e.preventDefault()
     contactSec.classList.toggle("contactActive")
+    if (contactSec.classList.contains("contactActive")) {
+        setTimeout(() => {
+            contactSec.classList.add("blurBack")
+        }, 400)
+    }else {
+        contactSec.classList.remove("blurBack")
+    }
 })
 
 function WordLength() {

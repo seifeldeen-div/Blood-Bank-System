@@ -206,10 +206,6 @@ main {
         align-items: center;
         justify-content: center;
 
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-
         transform: translateY(-120%);
         transition: 0.5s ease;
 
@@ -327,6 +323,13 @@ main {
                 }
             }
         }
+
+        &.blurBack {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        transition: 0.3s ease;
     }
 
     #counter,
@@ -362,6 +365,7 @@ main {
         transition: 0.5s ease;
         transform: translateX(-50%);
         transform: scale(0);
+
         &.done {
             top: 15%;
             transition: 0.5s ease;
