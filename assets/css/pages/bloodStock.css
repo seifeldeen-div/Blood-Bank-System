@@ -561,28 +561,3 @@ main {
         }
     }
 }
-
-/* ############################## */
-/* #################################### */
-/* responsive bloodCards */
-/* @media screen and (max-width:1485px) {
-    .bloodCards {
-        .container {
-            .cards {
-                .card {
-                    width: 450px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:1410px) {
-    .bloodCards {
-        .cards {
-            flex-wrap: wrap;
-        }
-    }
-} */
-
-/* #################################### */

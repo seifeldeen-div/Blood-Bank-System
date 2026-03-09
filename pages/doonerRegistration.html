@@ -31,22 +31,26 @@
                     </div>
                 </div>
                 <div class="form">
-                    <form action="" class="formData" id="formData">
+                    <form name="myForm" action="https://formspree.io/f/mjgakqjd" method="POST" class="formData" id="formData">
                         <div class="name">
                             <label for="name">Full Name<span>*</span></label>
-                            <input type="text" title="Enter Your name" placeholder="Enter your full name" name="name" id="name" required>
+                            <input type="text" title="Enter Your name" placeholder="Enter your full name" name="name"
+                                id="name" required>
                         </div>
                         <div class="nationalId">
                             <label for="nationalId">National Id<span>*</span></label>
-                            <input type="text" title="Enter Your ID" name="nationalId" maxlength="14" id="nationalId" placeholder="Enter your national ID" required>
+                            <input type="text" title="Enter Your ID" name="nationalId" maxlength="14" id="nationalId"
+                                placeholder="Enter your national ID" required>
                         </div>
                         <div class="age">
                             <label for="age">Age<span>*</span></label>
-                            <input type="number" title="Enter Your Age" name="age" min="1" max="120" id="age" placeholder="Enter your age" required>
+                            <input type="number" title="Enter Your Age" name="age" min="1" max="120" id="age"
+                                placeholder="Enter your age" required>
                         </div>
                         <div class="gender">
                             <label for="gender">Gender<span>*</span></label>
-                            <input list="genderList" title="Chhose Your Gender" name="gender" id="gender" placeholder="Select Gender" required>
+                            <input list="genderList" title="Chhose Your Gender" name="gender" id="gender"
+                                placeholder="Select Gender" required>
                             <datalist id="genderList">
                                 <option value="Male">
                                 <option value="Female">
@@ -54,7 +58,8 @@
                         </div>
                         <div class="bloodType">
                             <label for="bloodType">Blood Type<span>*</span></label>
-                            <input list="bloodList" title="Choose Blood Type" name="bloodType" id="bloodType" placeholder="Select Blood Type" required>
+                            <input list="bloodList" title="Choose Blood Type" name="bloodType" id="bloodType"
+                                placeholder="Select Blood Type" required>
                             <datalist id="bloodList">
                                 <option value="A+">
                                 <option value="A-">
@@ -68,23 +73,27 @@
                         </div>
                         <div class="phoneNumber">
                             <label for="phoneNumber">Phone Number<span>*</span></label>
-                            <input type="tel" title="Enter Phone Number" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" required>
+                            <input type="tel" title="Enter Phone Number" name="phoneNumber" id="phoneNumber"
+                                placeholder="Enter your phone number" required>
                         </div>
                         <div class="city">
                             <label for="city">City<span>*</span></label>
-                            <input type="text" title="Enter Your Location" name="city" id="city" placeholder="Select City" required>
+                            <input type="text" title="Enter Your Location" name="city" id="city"
+                                placeholder="Select City" required>
                         </div>
                         <div class="hospital">
                             <label for="hospital">Hospital</label>
-                            <input type="text" title="Enter Hospital Name" name="hosital" id="hosital" placeholder="Enter hospital name" required>
+                            <input type="text" title="Enter Hospital Name" name="hosital" id="hosital"
+                                placeholder="Enter hospital name" required>
                         </div>
                         <div class="lastDonation">
                             <label for="lastDonationdate">Last Donation Date<span>*</span></label>
-                            <input type="date" title="Enter Last Donation Date" name="lastDonation" id="lastDonation" placeholder="date" required>
+                            <input type="date" title="Enter Last Donation Date" name="lastDonation" id="lastDonation"
+                                placeholder="date" required>
                             <p>If this is your first time, select today's date</p>
                         </div>
                         <div class="btnSubmit">
-                            <button type="submit" id="btnSubmit">
+                            <button type="submit" id="btnSubmit" name="btnSubmit">
                                 <i class="fa-solid fa-user-plus"></i>
                                 Register as Donor
                             </button>

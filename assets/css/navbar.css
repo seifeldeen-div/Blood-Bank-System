@@ -109,6 +109,9 @@ nav {
                         border-radius: 8px;
                         transition: 0.3s ease;
 
+                        &.activeLink {
+                            background-color: var(--active-link-style);
+                        }
                         &:hover {
                             background-color: var(--active-link-style);
                         }
@@ -117,7 +120,7 @@ nav {
 
                 li:first-child {
                     a {
-                        background-color: var(--active-link-style);
+                        /* background-color: var(--active-link-style); */
                     }
                 }
 
