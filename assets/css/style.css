@@ -362,6 +362,7 @@ header {
   justify-content: space-between;
   cursor: pointer;
   padding:20px 0;
+  border-bottom: 6px solid #E7000B ;
   transition: all 0.44s ease;
 
   span {
