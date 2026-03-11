@@ -13,7 +13,30 @@
 </head>
 
 <body>
-    <nav id="navbar"></nav>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="headingLogo">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h1>Blood Bank</h1>
+                </div>
+                <div class="burgerMenue" id="burgerSign">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="links" id="links">
+                <ul>
+                    <li><a class="link1 link" href="index.html">Home</a></li>
+                    <li><a class="link2 link" href="pages/doonerRegistration.html">Dooner Registration</a></li>
+                    <li><a class="link3 link" href="pages/requestBlood.html">Request Blood</a></li>
+                    <li><a class="link4 link" href="pages/bloodStock.html">Blood Stock</a></li>
+                    <li><a class="link5 link" href="pages/hospitals.html">Hospitals</a></li>
+                    <li><a class="link6 link" href="pages/aboutContact.html">About/Contact</a></li>
+                    <!-- <li><a class="link7 link" href="../pages/admin.html">Admin</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main>
         <span class="doneMessage" id="doneMessage">
             Done
@@ -31,7 +54,8 @@
                     </div>
                 </div>
                 <div class="form">
-                    <form name="myForm" action="https://formspree.io/f/mjgakqjd" method="POST" class="formData" id="formData">
+                    <form name="myForm" action="https://formspree.io/f/mjgakqjd" method="POST" class="formData"
+                        id="formData">
                         <div class="name">
                             <label for="name">Full Name<span>*</span></label>
                             <input type="text" title="Enter Your name" placeholder="Enter your full name" name="name"
@@ -114,7 +138,72 @@
             </div>
         </section>
     </main>
-    <footer id="footer"></footer>
+    <footer>
+        <div class="container">
+            <div class="top">
+                <div class="logo">
+                    <div class="heading">
+                        <i class="fa-solid fa-droplet"></i>
+                        <h2>Blood Bank</h2>
+                    </div>
+                    <div class="para">
+                        <p>Saving lives through the gift of blood donation. Join our community of heroes today.</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="link-col">
+                        <div class="heading-col">
+                            <h3>Quick links</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="pages/doonerRegistration.html">Dooner Registration</a></li>
+                                <li><a href="pages/requestBlood.html">Request Blood</a></li>
+                                <li><a href="pages/bloodStock.html">Blood Stock</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-col">
+                        <div class="heading-col">
+                            <h3>Resources</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><a href="pages/hospitals.html">Find Hospitals</a></li>
+                                <li><a href="pages/aboutContact.html">About Us</a></li>
+                                <li><a href="pages/aboutContact.html">Contact Us</a></li>
+                                <li><a href="#">Admin Dashbord</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-col contactChild">
+                        <div class="heading-col">
+                            <h3>Contact us</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i><span>123 Medical District, Cairo</span>
+                                </li>
+                                <li><i class="fa-solid fa-envelope"></i><span>info@bloodbank.org</span></li>
+                                <li><i class="fa-solid fa-phone"></i><span>+20 2 1234 5678</span></li>
+                                <li>Emergency Hotline:</li>
+                                <li class="contactLastchild"><a href="tel:+20 155 131 3454">+20 155 131 3454</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>© 2026 Blood Bank Management System. All rights reserved.</p>
+                <div>
+                    <p>Developed with <a href="https://www.linkedin.com/in/seifeldeen-div/">Eng. Seif eldeen</a> ~ <a
+                            href="https://www.linkedin.com/in/esraa-mohamed-shalaby?utm_source=share_via&utm_content=profile&utm_medium=member_android">Eng.
+                            Esraa Shalaby</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- java script files -->
     <script src="../assets/js/load.js"></script>
     <script src="../assets/js/pages/doonerRegistration.js"></script>

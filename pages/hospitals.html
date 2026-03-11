@@ -11,19 +11,59 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- style -->
-     <link rel="stylesheet" href="../assets/css/pages/hospital.css">
-     <!-- icon -->
+    <link rel="stylesheet" href="../assets/css/pages/hospital.css">
+    <!-- icon -->
     <link rel="icon" type="png" href="../assets/imgs/OIP.png">
 </head>
 
 <body>
-    <nav id="navbar"></nav>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>navbar</title>
+        <link rel="stylesheet" href="../assets/css/navbar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <div class="headingLogo">
+                        <i class="fa-solid fa-droplet"></i>
+                        <h1>Blood Bank</h1>
+                    </div>
+                    <div class="burgerMenue" id="burgerSign">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="links" id="links">
+                    <ul>
+                        <li><a class="link1 link" href="../index.html">Home</a></li>
+                        <li><a class="link2 link" href="doonerRegistration.html">Dooner Registration</a></li>
+                        <li><a class="link3 link" href="requestBlood.html">Request Blood</a></li>
+                        <li><a class="link4 link" href="bloodStock.html">Blood Stock</a></li>
+                        <li><a class="link5 link" href="hospitals.html">Hospitals</a></li>
+                        <li><a class="link6 link" href="aboutContact.html">About/Contact</a></li>
+                        <!-- <li><a class="link7 link" href="../pages/admin.html">Admin</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </body>
+
+    </html>
     <main>
         <div class="container">
             <section class="heading">
                 <i class="fa-regular fa-hospital"></i>
                 <h2>Hospitals & Blood Banks</h2>
-                 <p>Find blood banks and hospitals in your area</p>
+                <p>Find blood banks and hospitals in your area</p>
             </section>
             <section class="content">
                 <!-- info -->
@@ -32,40 +72,40 @@
                         <p>Toatal Location<span style="color:#155DFC" id="count">6</span></p>
                         <i style="color:#155DFC" class="fa-regular fa-hospital"></i>
                     </div>
-                    <div class="item "  style="--color:#E7000B">
-                        <p>Toatal Location<span   id="count">4</span></p>
-                        <i  style="color:#E7000B" class="fa-solid fa-truck-medical"></i>
+                    <div class="item " style="--color:#E7000B">
+                        <p>Toatal Location<span id="count">4</span></p>
+                        <i style="color:#E7000B" class="fa-solid fa-truck-medical"></i>
                     </div>
                     <div class="item" style="--color:#00a63e">
-                        <p>Toatal Location<span style=" color:#00a63e"id="count">6</span></p>
-                        <i  style=" color:#00a63e" class="fa-solid fa-location-dot"></i>
+                        <p>Toatal Location<span style=" color:#00a63e" id="count">6</span></p>
+                        <i style=" color:#00a63e" class="fa-solid fa-location-dot"></i>
                     </div>
                 </div>
-                 <!--  hospitals -->
-                   <section class="hospitals">
+                <!--  hospitals -->
+                <section class="hospitals">
                     <!-- Location -->
                     <section class=" Places">
                         <div class="cairo card">
                             <i class="fa-regular fa-hospital"></i>
                             <p>Cairo</p>
                         </div>
-                        <div class="Alex card"  >
+                        <div class="Alex card">
                             <i class="fa-regular fa-hospital"></i>
                             <p>Alexandria</p>
                         </div>
-                        <div class="Giza card" >
+                        <div class="Giza card">
                             <i class="fa-regular fa-hospital"></i>
                             <p>Giza</p>
                         </div>
-                        <div class="Luxer card" >
+                        <div class="Luxer card">
                             <i class="fa-regular fa-hospital"></i>
                             <p>Luxer</p>
                         </div>
-                        <div class="Aswan card" >
+                        <div class="Aswan card">
                             <i class="fa-regular fa-hospital"></i>
                             <p>Aswan</p>
                         </div>
-                        <div class="portSaid card" >
+                        <div class="portSaid card">
                             <i class="fa-regular fa-hospital"></i>
                             <p>Port Said </p>
                         </div>
@@ -80,16 +120,17 @@
                                     <p><i class="fa-solid fa-location-dot"></i>123 Nile Street, Downtown</p>
                                     <span>cairo</span>
                                 </div>
-                                 <a href="tel:+20 2 1234 5678"><i class="fa-solid fa-phone"></i>+20 2 1234 5678</a>
-                                 <div class="bloodTypes">
-                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood Types:</h4>
-                                    <span>A+</span> 
-                                    <span>B+</span> 
-                                    <span>O+</span> 
-                                    <span>AB+</span> 
-                                    <span>O-</span> 
-                                 </div>
-                                 <button id="contact">contact</button>
+                                <a href="tel:+20 2 1234 5678"><i class="fa-solid fa-phone"></i>+20 2 1234 5678</a>
+                                <div class="bloodTypes">
+                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood
+                                        Types:</h4>
+                                    <span>A+</span>
+                                    <span>B+</span>
+                                    <span>O+</span>
+                                    <span>AB+</span>
+                                    <span>O-</span>
+                                </div>
+                                <button id="contact">contact</button>
                             </div>
                             <div class="item" id="Alex">
                                 <h3>Alexandria Medical Center</h3>
@@ -97,35 +138,37 @@
                                     <p><i class="fa-solid fa-location-dot"></i>456 Corniche Road</p>
                                     <span>Alexandria</span>
                                 </div>
-                                 <a href="tel:+20 3 8765 4321"><i class="fa-solid fa-phone"></i>+20 3 8765 4321</a>
-                                 <div class="bloodTypes">
-                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood Types:</h4>
-                                    <span>A+</span> 
-                                    <span>B+</span> 
-                                    <span>A-</span> 
-                                    <span>O+</span> 
-                                    <span>AB-</span> 
-                                 </div>
-                                 <button id="contact">contact</button>
+                                <a href="tel:+20 3 8765 4321"><i class="fa-solid fa-phone"></i>+20 3 8765 4321</a>
+                                <div class="bloodTypes">
+                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood
+                                        Types:</h4>
+                                    <span>A+</span>
+                                    <span>B+</span>
+                                    <span>A-</span>
+                                    <span>O+</span>
+                                    <span>AB-</span>
+                                </div>
+                                <button id="contact">contact</button>
                             </div>
-                            
+
                             <div class="item" id="Giza">
                                 <h3>Giza Central Blood Bank</h3>
                                 <div class="location">
                                     <p><i class="fa-solid fa-location-dot"></i>789 Pyramid Avenue</p>
                                     <span>Giza</span>
                                 </div>
-                                 <a href="tel:+20 2 5555 1234"><i class="fa-solid fa-phone"></i>+20 2 5555 1234</a>
-                                 <div class="bloodTypes">
-                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood Types:</h4>
-                                    <span>A+</span> 
-                                    <span>B+</span> 
-                                    <span>B-</span> 
-                                    <span>O+</span> 
-                                    <span>AB+</span> 
-                                    <span>O-</span> 
-                                 </div>
-                                 <button id="contact">contact</button>
+                                <a href="tel:+20 2 5555 1234"><i class="fa-solid fa-phone"></i>+20 2 5555 1234</a>
+                                <div class="bloodTypes">
+                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood
+                                        Types:</h4>
+                                    <span>A+</span>
+                                    <span>B+</span>
+                                    <span>B-</span>
+                                    <span>O+</span>
+                                    <span>AB+</span>
+                                    <span>O-</span>
+                                </div>
+                                <button id="contact">contact</button>
                             </div>
                             <div class="item" id="Luxer">
                                 <h3>Luxor Regional Hospital</h3>
@@ -133,16 +176,17 @@
                                     <p><i class="fa-solid fa-location-dot"></i>321 Temple Street</p>
                                     <span>Luxer</span>
                                 </div>
-                                 <a href="tel:+20 95 222 3333"><i class="fa-solid fa-phone"></i>+20 95 222 3333</a>
-                                 <div class="bloodTypes">
-                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood Types:</h4>
-                                    <span>A+</span> 
-                                    <span>B+</span> 
-                                    <span>O+</span> 
-                                     
-                                     
-                                 </div>
-                                 <button id="contact">contact</button>
+                                <a href="tel:+20 95 222 3333"><i class="fa-solid fa-phone"></i>+20 95 222 3333</a>
+                                <div class="bloodTypes">
+                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood
+                                        Types:</h4>
+                                    <span>A+</span>
+                                    <span>B+</span>
+                                    <span>O+</span>
+
+
+                                </div>
+                                <button id="contact">contact</button>
                             </div>
                             <div class="item" id="Aswan">
                                 <h3>Aswan Medical Complex</h3>
@@ -150,17 +194,18 @@
                                     <p><i class="fa-solid fa-location-dot"></i>654 Nile View Road</p>
                                     <span>Aswan</span>
                                 </div>
-                                 <a href="tel:+20 97 444 5555"><i class="fa-solid fa-phone"></i>+20 97 444 5555</a>
-                                 <div class="bloodTypes">
-                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood Types:</h4>
-                                    <span>A+</span> 
-                                    <span>A-</span> 
-                                    <span>AB-</span> 
-                                    <span>O+</span> 
-                                    <span>AB+</span> 
-                                    <span>O-</span> 
-                                 </div>
-                                 <button id="contact">contact</button>
+                                <a href="tel:+20 97 444 5555"><i class="fa-solid fa-phone"></i>+20 97 444 5555</a>
+                                <div class="bloodTypes">
+                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood
+                                        Types:</h4>
+                                    <span>A+</span>
+                                    <span>A-</span>
+                                    <span>AB-</span>
+                                    <span>O+</span>
+                                    <span>AB+</span>
+                                    <span>O-</span>
+                                </div>
+                                <button id="contact">contact</button>
                             </div>
                             <div class="item" id="PortSaid">
                                 <h3>Port Said Blood Donation Center</h3>
@@ -168,21 +213,22 @@
                                     <p><i class="fa-solid fa-location-dot"></i>987 Harbor Street</p>
                                     <span>Port Said</span>
                                 </div>
-                                 <a href="tel:+20 66 777 8888"><i class="fa-solid fa-phone"></i>+20 66 777 8888</a>
-                                 <div class="bloodTypes">
-                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood Types:</h4>
-                                     
-                                    <span>B+</span> 
-                                    <span>O+</span> 
-                                    <span>AB+</span> 
-                                    
-                                 </div>
-                                 <button id="contact">contact</button>
+                                <a href="tel:+20 66 777 8888"><i class="fa-solid fa-phone"></i>+20 66 777 8888</a>
+                                <div class="bloodTypes">
+                                    <h4><i style="color: #E7000B;" class="fa-solid fa-droplet"></i>Available Blood
+                                        Types:</h4>
+
+                                    <span>B+</span>
+                                    <span>O+</span>
+                                    <span>AB+</span>
+
+                                </div>
+                                <button id="contact">contact</button>
                             </div>
 
                         </div>
                     </aside>
-                   </section>
+                </section>
             </section>
         </div>
         <section class="contact">
@@ -216,9 +262,74 @@
             </div>
         </section>
     </main>
-    <footer id="footer"></footer>
+    <footer>
+        <div class="container">
+            <div class="top">
+                <div class="logo">
+                    <div class="heading">
+                        <i class="fa-solid fa-droplet"></i>
+                        <h2>Blood Bank</h2>
+                    </div>
+                    <div class="para">
+                        <p>Saving lives through the gift of blood donation. Join our community of heroes today.</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="link-col">
+                        <div class="heading-col">
+                            <h3>Quick links</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="pages/doonerRegistration.html">Dooner Registration</a></li>
+                                <li><a href="pages/requestBlood.html">Request Blood</a></li>
+                                <li><a href="pages/bloodStock.html">Blood Stock</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-col">
+                        <div class="heading-col">
+                            <h3>Resources</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><a href="pages/hospitals.html">Find Hospitals</a></li>
+                                <li><a href="pages/aboutContact.html">About Us</a></li>
+                                <li><a href="pages/aboutContact.html">Contact Us</a></li>
+                                <li><a href="#">Admin Dashbord</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-col contactChild">
+                        <div class="heading-col">
+                            <h3>Contact us</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i><span>123 Medical District, Cairo</span>
+                                </li>
+                                <li><i class="fa-solid fa-envelope"></i><span>info@bloodbank.org</span></li>
+                                <li><i class="fa-solid fa-phone"></i><span>+20 2 1234 5678</span></li>
+                                <li>Emergency Hotline:</li>
+                                <li class="contactLastchild"><a href="tel:+20 155 131 3454">+20 155 131 3454</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>© 2026 Blood Bank Management System. All rights reserved.</p>
+                <div>
+                    <p>Developed with <a href="https://www.linkedin.com/in/seifeldeen-div/">Eng. Seif eldeen</a> ~ <a
+                            href="https://www.linkedin.com/in/esraa-mohamed-shalaby?utm_source=share_via&utm_content=profile&utm_medium=member_android">Eng.
+                            Esraa Shalaby</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- java script files -->
-     <script src="../assets/js/pages/hospital.js"></script>
+    <script src="../assets/js/pages/hospital.js"></script>
     <script src="../assets/js/js.js"></script>
     <script src="../assets/js/load.js"></script>
 </body>

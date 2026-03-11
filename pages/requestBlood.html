@@ -15,9 +15,32 @@
 </head>
 
 <body>
-    <nav id="navbar"></nav>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="headingLogo">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h1>Blood Bank</h1>
+                </div>
+                <div class="burgerMenue" id="burgerSign">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="links" id="links">
+                <ul>
+                    <li><a class="link1 link" href="../index.html">Home</a></li>
+                    <li><a class="link2 link" href="aboutContact.html">Dooner Registration</a></li>
+                    <li><a class="link3 link" href="requestBlood.html">Request Blood</a></li>
+                    <li><a class="link4 link" href="bloodStock.html">Blood Stock</a></li>
+                    <li><a class="link5 link" href="hospitals.html">Hospitals</a></li>
+                    <li><a class="link6 link" href="aboutContact.html">About/Contact</a></li>
+                    <!-- <li><a class="link7 link" href="../pages/admin.html">Admin</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main>
-         <div class="register">
+        <div class="register">
             <section class="container">
                 <div class="heading">
                     <i class=" heart fa-solid fa-heart-pulse"></i>
@@ -49,13 +72,14 @@
                         </div>
                         <div class="Quantity">
                             <label for="Quantity">Quantity (Number of Bags) <span>*</span></label>
-                            <input name="Quantity" type="number" id="Quantity" min="1" max="10" placeholder="Number of bags needed"
-                                required>
+                            <input name="Quantity" type="number" id="Quantity" min="1" max="10"
+                                placeholder="Number of bags needed" required>
                             <span class="error">Quantity is required</span>
                         </div>
                         <div class="Hospital-name">
                             <label for="Hospital-name">Hospital Name <span>*</span></label>
-                            <input name="Hospital Name" type="text" id="Hospital-name" placeholder="Enter Hospital name" required>
+                            <input name="Hospital Name" type="text" id="Hospital-name" placeholder="Enter Hospital name"
+                                required>
                             <span class="error">Hospital name is required</span>
                         </div>
                         <div class="city">
@@ -72,7 +96,7 @@
                             <span class="error">City is required</span>
                         </div>
                         <div class="emergency">
-                            <label >Emergency Level <span>*</span></label>
+                            <label>Emergency Level <span>*</span></label>
                             <div class="buttons" id="emergency-level">
                                 <button id="normal"> NORMAL</button>
                                 <button id="urgent">URGENT</button>
@@ -100,16 +124,17 @@
                 </div>
                 <div class="requestInfo">
                     <h3><i class="fa-solid fa-circle-exclamation"></i>Request Information:</h3>
-                    <p><i class="fa-solid fa-check"></i> Your request will be processed within 24 hours for normal requests</p>
+                    <p><i class="fa-solid fa-check"></i> Your request will be processed within 24 hours for normal
+                        requests</p>
                     <p><i class="fa-solid fa-check"></i> Urgent requests are prioritized and processed immediately</p>
                     <p><i class="fa-solid fa-check"></i> You will be contacted once compatible blood is available</p>
                     <p><i class="fa-solid fa-check"></i> Make sure all information is accurate</p>
                 </div>
             </section>
-         </div>
+        </div>
         <!-- Submit Registration normal  -->
         <div class="submitedMassege SubmitMass">
-             <div class="massege">
+            <div class="massege">
                 <span><i class="fa-solid fa-circle-check"></i></span>
                 <p>Your request has been submitted successfully</p>
                 <span><i class="fa-solid fa-xmark"></i></span>
@@ -123,10 +148,10 @@
                         <li></li>
                     </ul>
                 </div>
-             </div>
+            </div>
         </div>
         <!--Submit Registration urgent  -->
-        <div class="submitedMassegeUrgent" >
+        <div class="submitedMassegeUrgent">
             <div class="massege">
                 <span><i class="fa-solid fa-xmark"></i></span>
                 <img src="../assets/imgs/urgent.png" alt="">
@@ -142,10 +167,11 @@
                     </ul>
                 </div>
                 <div class="urgent">
-                    <p><i class="fa-solid fa-triangle-exclamation"></i>This request will be marked as URGENT and prioritized for
+                    <p><i class="fa-solid fa-triangle-exclamation"></i>This request will be marked as URGENT and
+                        prioritized for
                         immediate processing.</p>
                 </div>
-             </div>
+            </div>
         </div>
         <!-- Not Submit Registration -->
         <div class="fix">
@@ -153,7 +179,72 @@
             <i class="fa-solid fa-circle-exclamation"></i>
         </div>
     </main>
-    <footer id="footer"></footer>
+    <footer>
+        <div class="container">
+            <div class="top">
+                <div class="logo">
+                    <div class="heading">
+                        <i class="fa-solid fa-droplet"></i>
+                        <h2>Blood Bank</h2>
+                    </div>
+                    <div class="para">
+                        <p>Saving lives through the gift of blood donation. Join our community of heroes today.</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="link-col">
+                        <div class="heading-col">
+                            <h3>Quick links</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="doonerRegistration.html">Dooner Registration</a></li>
+                                <li><a href="requestBlood.html">Request Blood</a></li>
+                                <li><a href="bloodStock.html">Blood Stock</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-col">
+                        <div class="heading-col">
+                            <h3>Resources</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><a href="hospitals.html">Find Hospitals</a></li>
+                                <li><a href="aboutContact.html">About Us</a></li>
+                                <li><a href="aboutContact.html">Contact Us</a></li>
+                                <li><a href="#">Admin Dashbord</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-col contactChild">
+                        <div class="heading-col">
+                            <h3>Contact us</h3>
+                        </div>
+                        <div class="innerLinks">
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i><span>123 Medical District, Cairo</span>
+                                </li>
+                                <li><i class="fa-solid fa-envelope"></i><span>info@bloodbank.org</span></li>
+                                <li><i class="fa-solid fa-phone"></i><span>+20 2 1234 5678</span></li>
+                                <li>Emergency Hotline:</li>
+                                <li class="contactLastchild"><a href="tel:+20 155 131 3454">+20 155 131 3454</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>© 2026 Blood Bank Management System. All rights reserved.</p>
+                <div>
+                    <p>Developed with <a href="https://www.linkedin.com/in/seifeldeen-div/">Eng. Seif eldeen</a> ~ <a
+                            href="https://www.linkedin.com/in/esraa-mohamed-shalaby?utm_source=share_via&utm_content=profile&utm_medium=member_android">Eng.
+                            Esraa Shalaby</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- java script files -->
     <script src="../assets/js/pages/requestRegistration.js"></script>
     <script src="../assets/js/load.js"></script>

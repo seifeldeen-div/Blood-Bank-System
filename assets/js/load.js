@@ -1,47 +1,22 @@
-// بيحدد الـ path تلقائي بناءً على مكان الصفحة
-const isRoot = window.location.pathname.endsWith("index.html")
-    || window.location.pathname === "/";
-const basePath = isRoot ? "." : "..";
+let burgerSign = document.querySelector("#burgerSign");
+// let links = document.querySelector("#links");
+let lis = document.querySelectorAll("#links ul li")
+let container = document.querySelector(".container")
+let links = document.querySelectorAll(".link")
 
-fetch(`${basePath}/components/navbar.html`)
-    .then(response => {
-        if (!response.ok) throw new Error("Navbar not found");
-        return response.text();
+links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        // e.preventDefault()
+        links.forEach(l => l.classList.remove("activeLink"))
+        link.classList.add("activeLink")
     })
-    .then(data => {
-        document.getElementById("navbar").innerHTML = data;
+})
 
-        let burgerSign = document.querySelector("#burgerSign");
-        // let links = document.querySelector("#links");
-        let lis = document.querySelectorAll("#links ul li")
-        let container = document.querySelector(".container")
-        let links = document.querySelectorAll(".link")
-
-        links.forEach((link) => {
-            link.addEventListener("click", (e) => {
-                // e.preventDefault()
-                links.forEach(l => l.classList.remove("activeLink"))
-                link.classList.add("activeLink")
-            })
-        })
-
-        burgerSign.addEventListener("click", () => {
-            // let currentDisplay = window.getComputedStyle(links).display;
-            burgerSign.classList.toggle("scale")
-            container.classList.toggle("active")
-            lis.forEach(li => {
-                li.style.pointerEvents = "all";
-            })
-        });
+burgerSign.addEventListener("click", () => {
+    // let currentDisplay = window.getComputedStyle(links).display;
+    burgerSign.classList.toggle("scale")
+    container.classList.toggle("active")
+    lis.forEach(li => {
+        li.style.pointerEvents = "all";
     })
-    .catch(err => console.error("Error loading navbar:", err));
-
-fetch(`${basePath}/components/footer.html`)
-    .then(response => {
-        if (!response.ok) throw new Error("Footer not found");
-        return response.text();
-    })
-    .then(data => {
-        document.getElementById("footer").innerHTML = data;
-    })
-    .catch(err => console.error("Error loading footer:", err));
+});

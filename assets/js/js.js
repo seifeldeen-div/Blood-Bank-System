@@ -13,5 +13,4 @@ counter.forEach(counter => {
             counter.innerText = Math.floor(count);
         }
     },10);
-    
 });
