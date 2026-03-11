@@ -39,28 +39,28 @@
             </div>
             <div class="content">
                 <div class="item">
-                   <div class="icon">
-                    <i class="fa-solid fa-user-group"></i>
-                   </div>
-                   <div id="counter" data-target="1247">0</div>
-                   <h4>Total Donors</h4>
-                   <input  type="range">
+                    <div class="icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <div id="counter" data-target="1247">0</div>
+                    <h4>Total Donors</h4>
+                    <input type="range">
                 </div>
                 <div class="item">
-                   <div class="icon">
-                    <i class="fa-solid fa-heart-pulse"></i>
-                   </div>
-                   <div id="counter" data-target="356">0</div>
-                   <h4>Blood Requests</h4>
-                   <input type="range">
+                    <div class="icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div id="counter" data-target="356">0</div>
+                    <h4>Blood Requests</h4>
+                    <input type="range">
                 </div>
                 <div class="item">
-                   <div class="icon">
-                    <i class="fa-solid fa-droplet"></i>
-                   </div>
-                   <div id="counter" data-target="482">0</div>
-                   <h4>Available Bags</h4>
-                   <input   type="range">
+                    <div class="icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <div id="counter" data-target="482">0</div>
+                    <h4>Available Bags</h4>
+                    <input type="range">
                 </div>
             </div>
         </section>
@@ -70,17 +70,17 @@
             <h2>Why Donate Blood ? </h2>
             <div class="content">
                 <div class="item">
-                    <span ><i   class="fa-solid fa-heart"></i></span>
+                    <span><i class="fa-solid fa-heart"></i></span>
                     <h3>Save Lives</h3>
                     <p>One donation can save up to three lives</p>
                 </div>
                 <div class="item">
-                    <span ><i class="fa-solid fa-hospital"></i></span>
+                    <span><i class="fa-solid fa-hospital"></i></span>
                     <h3>Always Needed</h3>
                     <p>Blood is needed every 2 seconds</p>
                 </div>
                 <div class="item">
-                    <span  ><i   class="fa-solid fa-bolt-lightning"></i></span>
+                    <span><i class="fa-solid fa-bolt-lightning"></i></span>
                     <h3>Health Benefits</h3>
                     <p>Regular donation has health benefits</p>
                 </div>
@@ -93,27 +93,41 @@
         </section>
         <!--end Why we Donate Blood  -->
         <!-- start Ready to Make a Difference -->
-         <section class="makeAdifference">
-        <div class="content">
-            <h2>Ready to Make a Difference?</h2>
-            <p>Join thousands of donors who are saving lives every day. Your contribution matters more than you know.</p>
-            <div class="buttons">
-                <a href="pages/doonerRegistration.html">
-                    <button id="donorRegistration">Register as Donor<i class="fa-solid fa-arrow-right"></i></button>
-                </a>
-                <a href="pages/bloodStock.html">
-                    <button id="bloodStock">Check Blood Stock<i class="fa-solid fa-arrow-right"></i></button>
-                </a>
+        <section class="makeAdifference">
+            <div class="content">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Join thousands of donors who are saving lives every day. Your contribution matters more than you
+                    know.</p>
+                <div class="buttons">
+                    <a href="pages/doonerRegistration.html">
+                        <button id="donorRegistration">Register as Donor<i class="fa-solid fa-arrow-right"></i></button>
+                    </a>
+                    <a href="pages/bloodStock.html">
+                        <button id="bloodStock">Check Blood Stock<i class="fa-solid fa-arrow-right"></i></button>
+                    </a>
+                </div>
             </div>
-        </div>
-         </section>
+        </section>
         <!-- end Ready to Make a Difference -->
-    </main>    
+    </main>
     <!-- End Main -->
     <footer id="footer"></footer>
     <!-- java script files -->
     <script src="assets/js/js.js"></script>
     <script src="assets/js/load.js"></script>
+    <script>
+        // fetch للـ navbar
+        fetch("components/navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar").innerHTML = data)
+            .catch(err => console.error(err));
+
+        // fetch للـ footer
+        fetch("components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data)
+            .catch(err => console.error(err));
+    </script>
 </body>
 
 </html>
