@@ -118,7 +118,7 @@ main {
             border-radius: 10px;
             background-color: white;
             box-shadow: 0 2px 0 2px #c50008;
-            transition: 0.3s;
+            transition: 0.1s;
 
             i {
               color: #c50008;
@@ -146,6 +146,9 @@ main {
           border: 1px solid rgba(0, 0, 0, 0.1);
           border-radius: 10px;
           box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+          i{
+            display: none;
+          }
           .content {
             width: 90%;
              height:100%;
@@ -159,7 +162,7 @@ main {
               border-radius: 10px;
               transition: 0.3s;
               padding:  20px ;
-              height: 50%;
+              height: 60%;
               display: flex;
               flex-direction: column;
               /* align-items: center; */
@@ -173,9 +176,6 @@ main {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                p{
-                  
-                }
                 span{
                   background-color: white;
                   border-radius: 10px;
@@ -183,6 +183,20 @@ main {
                   
                   padding:10px;
                 }
+              }
+              .bloodTypes{
+                padding:10px 0;
+                h4{
+                  margin-bottom: 12px;
+                }
+                  span{
+                    background-color: rgba(231, 0, 11);
+                     color: white;
+                     padding:5px;
+                     border-radius: 2px;
+                     margin-left: 5px;
+                      
+                  }
               }
               button {
                 width: 100%;
@@ -201,4 +215,277 @@ main {
       }
     }
   }
+      .contact {
+        position: fixed;
+        top: 5%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: translateY(-120%);
+        transition: 0.5s ease;
+          z-index: 999;
+        &.contactActive {
+            transform: translateY(0);
+            transition: 0.5s ease;
+        }
+
+        /* border: solid; */
+
+        .container {
+            /* border: solid; */
+            padding: 30px 0;
+            width: 85%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .form {
+                width: 50%;
+                /* border: solid; */
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 8px 11px 0px rgba(0, 0, 0, 0.2);
+                background-color: white;
+
+                .headingform {
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+
+                /* border-top: 10px red;
+                border-top-style: groove; */
+
+                form {
+                    width: 100%;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+
+                        span {
+                            color: red;
+                        }
+
+                        input,
+                        textarea {
+                            height: 50px;
+                            width: 100%;
+                            outline: none;
+                            border: 1px solid rgb(0 0 0 / 0.2);
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 5px 0 10px;
+                            transition: 0.5s ease;
+                            font-size: 15px;
+
+                            &:focus {
+                                /* background-color: #e7030a; */
+                                color: red;
+                                border: 1px solid rgba(51, 0, 255, 0.455);
+                            }
+
+                            &:focus::placeholder {
+                                color: white;
+                            }
+
+                            &:hover:not(:focus) {
+                                box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+                            }
+                        }
+
+                        textarea {
+                            height: 150px;
+                            border-radius: 5px;
+                            resize: none;
+
+                            &.maxCount {
+                                background-color: red;
+                                color: white;
+                            }
+                        }
+                    }
+
+                    input[type="submit"] {
+                        background: linear-gradient(to right, rgb(255, 66, 66) 10%, #cb0007 80%);
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: white;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: translateY(-4px);
+                            background-color: #ADFF2F;
+                            color: white;
+                            transform-origin: bottom left;
+                        }
+
+                        &.SubmitOk {
+                            background-color: #ADFF2F;
+                            color: white;
+                            transform-origin: bottom left;
+                        }
+
+                        &:focus {
+                            color: white;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blurBack {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        transition: 0.3s ease;
+    }
+
+    #counter,
+    #warningMessaage {
+        text-align: end;
+        margin-bottom: 5px;
+        color: red;
+        font-size: 15px;
+    }
+
+    #center {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #SubmitMessage {
+        position: absolute;
+        /* z-index: -1; */
+        top: 0;
+        left: 10%;
+        width: 50px;
+        aspect-ratio: 1;
+        background-color: white;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: 900;
+        transition: 0.5s ease;
+        transform: translateX(-50%);
+        transform: scale(0);
+
+        &.done {
+            top: 15%;
+            transition: 0.5s ease;
+            transform: scale(1.1) rotate(360deg);
+        }
+    }
+}
+/* __________Animation___________ */
+@keyframes animationCard-border {
+    0% {
+        border-color: red;
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    75% {
+        border-color: #C50008;
+    }
+
+    100% {
+        border-color: purple;
+    }
+}
+/* ___________Responsive________ */
+@media screen and (max-width: 1113px){
+ main{
+   margin-top: 100px;
+  .container{
+  
+  }
+ }
+}
+@media screen and (max-width: 732px){
+  main{
+    .container{
+       width: 92%;
+       .content{
+         .hospitals{
+          position: relative;
+          .Places{
+            flex: 1 1 100%;
+            column-gap: 12px;
+            .card{
+              flex: 1 1 200px;
+              padding: 20px;
+            }
+          }
+          .about{
+            position: fixed;
+            top: 0;
+            right: -100%;         
+            width: 70%;
+            height: 100vh;
+            z-index: 10;
+            border-radius: 0;
+            transition: right 0.4s ease;
+            overflow-y: auto;
+
+            &.showAbout {
+              right: 0;            
+            }
+            #closeAbout {
+              position: absolute;
+              top:  110px;
+              right: 15px;
+              background: white;
+              color: #c50008;
+              border: none;
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              font-size: 18px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 1000;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            }
+          }
+        }
+       }
+    }
+  }
+}
+@media screen and (max-width:900px) {
+    main {
+        .contact {
+            .container {
+
+                .form {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
