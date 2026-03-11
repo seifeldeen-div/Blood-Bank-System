@@ -135,26 +135,20 @@ main {
                   cursor: pointer;
                   font-size: 16px;
                   transition: all 0.4s ease;
-                  opacity: 0.89;
-                  i {
-                    transform: translateX(-50%);
-                    font-size: 18px;
-                  }
+                  /* opacity: 0.89; */
                   &#normal {
                     background-color: #f0fdf4;
+                    font-weight:800;
                     border-color: #00c950;
-                    i {
-                      color: #00c950;
-                    }
+                  color:#00c950;
                     &:hover {
                       background-color: #f0fdf4;
                       border-color: #00c950;
                     }
                   }
                   &#urgent {
-                    i {
-                      color: #fb2c36;
-                    }
+                    font-weight:800;
+                    color:#fb2c36;
                     &:hover {
                       border-color: #fb2c36;
                     }
@@ -487,6 +481,12 @@ main {
         img {
           margin-bottom: 10px;
         }
+          .urgent {
+          height:auto;
+          p {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -516,8 +516,9 @@ main {
           margin-bottom: 0px;
         }
         .urgent {
+          height:auto;
           p {
-            font-size: 12px;
+            font-size: 15px;
           }
         }
       }

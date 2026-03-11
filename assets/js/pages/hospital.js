@@ -1,8 +1,8 @@
 const cards = document.querySelectorAll('.Places .card');
 const items = document.querySelectorAll('.about .item');
-let contactBtn = document.querySelector('#contact');
-let contactSec = document.querySelector(".contact")
-let counter = document.querySelector("#counter")
+let contactBtn = document.querySelectorAll('.item #contact');
+let contactSec = document.querySelector(" .contact");
+let counter = document.querySelector("#counter");
 let textMessage = document.querySelector("#textMessage")
 let countLimit = 10
 let warningMessaage = document.querySelector("#warningMessaage")
@@ -35,16 +35,18 @@ cards.forEach(card => {
 });
 // click button to present contact sec
 
-contactBtn.addEventListener('click', (e) =>{
-    e.preventDefault()
-    contactSec.classList.toggle("contactActive")
-    if (contactSec.classList.contains("contactActive")) {
-        setTimeout(() => {
-            contactSec.classList.add("blurBack")
-        }, 400)
-    }else {
-        contactSec.classList.remove("blurBack")
-    }
+contactBtn.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        contactSec.classList.toggle("contactActive")
+        if (contactSec.classList.contains("contactActive")) {
+            setTimeout(() => {
+                contactSec.classList.add("blurBack")
+            }, 400)
+        } else {
+            contactSec.classList.remove("blurBack")
+        }
+    })
 })
 WordLength()
 
