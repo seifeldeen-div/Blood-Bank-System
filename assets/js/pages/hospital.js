@@ -48,6 +48,26 @@ contactBtn.forEach(btn => {
         }
     })
 })
+
+document.addEventListener('click', (e) => {
+    if (
+        window.innerWidth <= 732 &&
+        !aboutPanel.contains(e.target) &&
+        !e.target.closest('.Places .card')
+    ) {
+        aboutPanel.classList.remove('showAbout');
+    }
+
+     
+    if (
+        contactSec.classList.contains("contactActive") &&
+        !contactSec.querySelector("form").contains(e.target) &&
+        !e.target.closest('#contact')
+    ) {
+        contactSec.classList.remove("contactActive");
+        contactSec.classList.remove("blurBack");
+    }
+});
 WordLength()
 
 form.addEventListener("submit", (e) => {

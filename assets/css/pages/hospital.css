@@ -179,7 +179,6 @@ main {
                   background-color: white;
                   border-radius: 10px;
                   color: #E7000B;
-                  
                   padding:10px;
                 }
               }
@@ -193,7 +192,6 @@ main {
                      color: white;
                      padding:5px;
                      border-radius: 2px;
-                     margin-left: 5px;
                       
                   }
               }
@@ -448,7 +446,18 @@ main {
             border-radius: 0;
             transition: right 0.4s ease;
             overflow-y: auto;
-
+             .content{
+              .item{
+              height:auto;
+              padding:40px 10px;
+              gap:20px;
+              .bloodTypes{
+            span{
+              margin-top:5px;
+            }
+           }
+            }
+             }
             &.showAbout {
               right: 0;            
             }
