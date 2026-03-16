@@ -94,8 +94,8 @@ Blood-Bank-System/
 
 | Name | GitHub |
 |------|--------|
-| **Eng. Seif Eldeen Mohamed** | [ُ](https://www.linkedin.com/in/seifeldeen-div/) |
-| **Eng. Esraa Shalaby** | [](https://www.linkedin.com/in/esraa-mohamed-shalaby/) |
+| **Eng. Seif Eldeen Mohamed** | [Eng. Seif Eldeen Mohamed](https://www.linkedin.com/in/seifeldeen-div/) |
+| **Eng. Esraa Shalaby** | [Eng. Esraa Shalaby](https://www.linkedin.com/in/esraa-mohamed-shalaby/) |
 
 ---
 
