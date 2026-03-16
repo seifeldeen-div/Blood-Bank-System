@@ -92,10 +92,10 @@ Blood-Bank-System/
 
 ## 👥 Team
 
-| Name | GitHub |
+| Name | LinkedIn |
 |------|--------|
-| **Eng. Seif Eldeen Mohamed** | [Eng. Seif Eldeen Mohamed](https://www.linkedin.com/in/seifeldeen-div/) |
-| **Eng. Esraa Shalaby** | [Eng. Esraa Shalaby](https://www.linkedin.com/in/esraa-mohamed-shalaby/) |
+| **Eng. Seif Eldeen Mohamed** | [Profile](https://www.linkedin.com/in/seifeldeen-div/) |
+| **Eng. Esraa Shalaby** | [Profile](https://www.linkedin.com/in/esraa-mohamed-shalaby/) |
 
 ---
 
